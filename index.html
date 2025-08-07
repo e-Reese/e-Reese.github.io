@@ -92,10 +92,13 @@
                 <h3>Step 2: Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
 
                 <div class="code-block">
-                    <pre><code># Confirm OS is up to date
-                        sudo apt-get update
-                        sudo apt-get full-upgrade
-                        sudo reboot</code></pre>
+                    <pre>
+                        <code># Confirm OS is up to date
+sudo apt-get update
+sudo apt-get full-upgrade
+sudo reboot
+                        </code>
+                    </pre>
                 </div>
                 
                 <p>
@@ -103,15 +106,38 @@
                 </p>
                 <div class="code-block">
                     <pre><code># Set WiFi country
-                        sudo raspi-config
-                        # Select "Localisation Options"
-                        # Select "Change WiFi Country"
-                        # Select your country</code></pre>
+sudo raspi-config
+# Select "Localisation Options"
+# Select "Change WiFi Country"
+# Select your country
+                    </code></pre>
                 </div>
                 <div class="featured-image">
                     <img src="images/Raspi-config_window.png" alt="Raspberry Pi WiFi Country Configuration">
                     <p class="caption">Raspberry Pi WiFi Country Configuratio</p>
                 </div>
+
+                <p>
+                    Invoke RaspAP's Quick Installer.
+                </p>
+                <div class="code-block">
+                    <pre><code># Invoke RaspAP's Quick Installer
+curl -sL https://install.raspap.com | bash
+                    </code></pre>
+                </div>
+                <p>
+                    At the end of the install process, accept the prompt to reboot your system. 
+                    The default configuration is as follows:
+                    <ul>
+                        <li>IP address: 10.3.141.1</li>
+                        <li>Username: admin</li>
+                        <li>Password: secret</li>
+                        <li>DHCP range: 10.3.141.50 — 10.3.141.254</li>
+                        <li>SSID: RaspAP</li>
+                        <li>Password: ChangeMe</li>
+                    </ul>
+                    For the offical documentation on installing RaspAP, see <a href="https://raspap.com/#quick" target="_blank">here</a>.
+                </p>
 
             </section>
 
@@ -121,7 +147,7 @@
                     Once RaspAP is running, you'll need to access the web interface to configure it.
                 </p>
                 
-                <h3>Step 2: Access the Web Interface</h3>
+                <h3>Step 3: Access the Web Interface</h3>
                 <p>
                     Connect to your Raspberry Pi using SSH or by navigating to 192.168.1.1 in your web browser.
                 </p>
