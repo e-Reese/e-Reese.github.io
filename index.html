@@ -30,9 +30,8 @@
             <header class="article-header">
                 <h1>Building a Travel Router with Raspberry Pi</h1>
                 <div class="meta">
-                    <span class="author">By Your Name</span>
-                    <span class="date">June 15, 2023</span>
-                    <span class="read-time">15 min read</span>
+                    <span class="author">By Ethan Reese</span>
+                    <span class="date">August 7, 2025</span>
                 </div>
                 <div class="featured-image">
                     <img src="images/raspberry-pi-router.jpg" alt="Raspberry Pi Travel Router Setup">
@@ -42,8 +41,8 @@
 
             <section class="intro">
                 <p>
-                    Have you ever been frustrated with hotel Wi-Fi that limits connections to one device? Or wanted to create a secure network while traveling? In this tutorial, 
-                    I'll walk you through how I built a portable travel router using a Raspberry Pi that solved these problems and more.
+                    My purpose for building this travel router was to solve the problem of hotel Wi-Fi that limits connections to one device and to create a secure network while traveling. In this tutorial, 
+                    I'll walk you through how I built a portable travel router using a Raspberry Pi that solved these problems.
                 </p>
                 <p>
                     This guide will take you through the entire process from gathering components to configuring the software and using your router on the go.
@@ -53,12 +52,14 @@
             <section id="materials">
                 <h2>What You'll Need</h2>
                 <ul class="materials-list">
+                    <li>A laptop or desktop computer</li>
                     <li>Raspberry Pi (I used a Pi 4, but Pi 3B+ works too)</li>
                     <li>MicroSD card (16GB or larger recommended)</li>
                     <li>USB Wi-Fi adapter (for dual Wi-Fi capability)</li>
                     <li>Portable power bank (optional but recommended)</li>
                     <li>Small case for protection</li>
                     <li>Ethernet cable (optional)</li>
+                    <li>A monitor, keyboard, and mouse (optional)</li>
                 </ul>
                 <div class="image-grid">
                     <figure>
@@ -68,21 +69,41 @@
                 </div>
             </section>
 
-            <section id="software-setup">
-                <h2>Software Setup</h2>
-                <p>
-                    We'll be using OpenWrt as our router operating system. It's lightweight, powerful, and perfect for this application.
-                </p>
+            <section id="os-setup">
+                <h2>Raspbian OS Setup</h2>
                 
-                <h3>Step 1: Download and Flash OpenWrt</h3>
+                <h3>Step 1: Download and Flash Raspbian OS</h3>
                 <p>
-                    First, download the appropriate OpenWrt image for your Raspberry Pi model from the 
-                    <a href="https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official OpenWrt site</a>.
+                    First, download the appropriate RaspAP image for your Raspberry Pi model from the 
+                    <a href="https://RaspAP.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official RaspAP site</a>.
                 </p>
                 
                 <div class="code-block">
                     <pre><code># Flash the image to your SD card
-sudo dd if=openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M conv=fsync
+sudo dd if=RaspAP-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M conv=fsync
+# Replace /dev/sdX with your SD card device</code></pre>
+                </div>
+                
+                <p>
+                    After flashing, insert the SD card into your Raspberry Pi and connect it to your computer via Ethernet.
+                </p>
+            </section>
+
+            <section id="software-setup">
+                <h2>Software Setup</h2>
+                <p>
+                    We'll be using RaspAP as our router operating system.
+                </p>
+                
+                <h3>Step 1: Download and Flash RaspAP</h3>
+                <p>
+                    First, download the appropriate RaspAP image for your Raspberry Pi model from the 
+                    <a href="https://RaspAP.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official RaspAP site</a>.
+                </p>
+                
+                <div class="code-block">
+                    <pre><code># Flash the image to your SD card
+sudo dd if=RaspAP-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M conv=fsync
 # Replace /dev/sdX with your SD card device</code></pre>
                 </div>
                 
@@ -94,7 +115,7 @@ sudo dd if=openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M 
             <section id="configuration">
                 <h2>Basic Configuration</h2>
                 <p>
-                    Once OpenWrt is running, you'll need to access the web interface to configure it.
+                    Once RaspAP is running, you'll need to access the web interface to configure it.
                 </p>
                 
                 <h3>Step 2: Access the Web Interface</h3>
@@ -108,8 +129,8 @@ sudo dd if=openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M 
                 </div>
                 
                 <figure class="image-full">
-                    <img src="images/openwrt-login.jpg" alt="OpenWrt login screen">
-                    <figcaption>The OpenWrt login screen - you'll need to set a password on first login</figcaption>
+                    <img src="images/RaspAP-login.jpg" alt="RaspAP login screen">
+                    <figcaption>The RaspAP login screen - you'll need to set a password on first login</figcaption>
                 </figure>
             </section>
 
@@ -121,7 +142,7 @@ sudo dd if=openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M 
                 
                 <h3>Step 3: Configure Wi-Fi Interfaces</h3>
                 <p>
-                    In the OpenWrt interface, navigate to Network → Wireless and configure both interfaces:
+                    In the RaspAP interface, navigate to Network → Wireless and configure both interfaces:
                 </p>
                 
                 <ul>
