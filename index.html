@@ -73,7 +73,7 @@
                     Once downloaded, open the imager and select the Raspberry Pi OS (64-bit) image. Select the SD card and click "Next", then "Write" to flash the image to the SD card.
                 </p>
                 <div class="featured-image">
-                    <img src="images/RaspPiImager.png" alt="Raspberry Pi Travel Router Setup">
+                    <img src="images/RaspPiImager.png" alt="Raspberry Pi Imager Settings">
                     <p class="caption">Raspberry Pi Imager Settings</p>
                 </div>
                 
@@ -89,21 +89,30 @@
                     We'll be using RaspAP as our router operating system.
                 </p>
                 
-                <h3>Step 1: Download and Flash RaspAP</h3>
-                <p>
-                    First, download the appropriate RaspAP image for your Raspberry Pi model from the 
-                    <a href="https://RaspAP.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official RaspAP site</a>.
-                </p>
-                
+                <h3>Step 2: Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
+
                 <div class="code-block">
-                    <pre><code># Flash the image to your SD card
-sudo dd if=RaspAP-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M conv=fsync
-# Replace /dev/sdX with your SD card device</code></pre>
+                    <pre><code># Confirm OS is up to date
+                        sudo apt-get update
+                        sudo apt-get full-upgrade
+                        sudo reboot</code></pre>
                 </div>
                 
                 <p>
-                    After flashing, insert the SD card into your Raspberry Pi and connect it to your computer via Ethernet.
+                    Set the WiFi country to the country where you're located.
                 </p>
+                <div class="code-block">
+                    <pre><code># Set WiFi country
+                        sudo raspi-config
+                        # Select "Localisation Options"
+                        # Select "Change WiFi Country"
+                        # Select your country</code></pre>
+                </div>
+                <div class="featured-image">
+                    <img src="images/Raspi-config_window.png" alt="Raspberry Pi WiFi Country Configuration">
+                    <p class="caption">Raspberry Pi WiFi Country Configuratio</p>
+                </div>
+
             </section>
 
             <section id="configuration">
