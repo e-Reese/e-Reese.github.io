@@ -1,4 +1,4 @@
-# Raspberry Pi Travel Router Tutorial Website [label](e-reese.github.io)
+# Raspberry Pi Travel Router Tutorial [Website](e-reese.github.io)
 
 This is a tutorial website documenting how I built a travel router/wifi relay using a Raspberry Pi. 
 
