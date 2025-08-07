@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Travel Router with Raspberry Pi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Travel Router Tutorial</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="setup.html">Setup</a></li>
+                    <li><a href="#">Configuration</a></li>
+                    <li><a href="#">Usage</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <header class="article-header">
+                <h1>Building a Travel Router with Raspberry Pi</h1>
+                <div class="meta">
+                    <span class="author">By Your Name</span>
+                    <span class="date">June 15, 2023</span>
+                    <span class="read-time">15 min read</span>
+                </div>
+                <div class="featured-image">
+                    <img src="images/raspberry-pi-router.jpg" alt="Raspberry Pi Travel Router Setup">
+                    <p class="caption">My complete travel router setup using a Raspberry Pi 4</p>
+                </div>
+            </header>
+
+            <section class="intro">
+                <p>
+                    Have you ever been frustrated with hotel Wi-Fi that limits connections to one device? Or wanted to create a secure network while traveling? In this tutorial, 
+                    I'll walk you through how I built a portable travel router using a Raspberry Pi that solved these problems and more.
+                </p>
+                <p>
+                    This guide will take you through the entire process from gathering components to configuring the software and using your router on the go.
+                </p>
+            </section>
+
+            <section id="materials">
+                <h2>What You'll Need</h2>
+                <ul class="materials-list">
+                    <li>Raspberry Pi (I used a Pi 4, but Pi 3B+ works too)</li>
+                    <li>MicroSD card (16GB or larger recommended)</li>
+                    <li>USB Wi-Fi adapter (for dual Wi-Fi capability)</li>
+                    <li>Portable power bank (optional but recommended)</li>
+                    <li>Small case for protection</li>
+                    <li>Ethernet cable (optional)</li>
+                </ul>
+                <div class="image-grid">
+                    <figure>
+                        <img src="images/components.jpg" alt="Components needed for the travel router">
+                        <figcaption>All the components laid out before assembly</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="software-setup">
+                <h2>Software Setup</h2>
+                <p>
+                    We'll be using OpenWrt as our router operating system. It's lightweight, powerful, and perfect for this application.
+                </p>
+                
+                <h3>Step 1: Download and Flash OpenWrt</h3>
+                <p>
+                    First, download the appropriate OpenWrt image for your Raspberry Pi model from the 
+                    <a href="https://openwrt.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official OpenWrt site</a>.
+                </p>
+                
+                <div class="code-block">
+                    <pre><code># Flash the image to your SD card
+sudo dd if=openwrt-bcm27xx-bcm2711-rpi-4-squashfs-factory.img of=/dev/sdX bs=4M conv=fsync
+# Replace /dev/sdX with your SD card device</code></pre>
+                </div>
+                
+                <p>
+                    After flashing, insert the SD card into your Raspberry Pi and connect it to your computer via Ethernet.
+                </p>
+            </section>
+
+            <section id="configuration">
+                <h2>Basic Configuration</h2>
+                <p>
+                    Once OpenWrt is running, you'll need to access the web interface to configure it.
+                </p>
+                
+                <h3>Step 2: Access the Web Interface</h3>
+                <p>
+                    Connect to your Raspberry Pi using SSH or by navigating to 192.168.1.1 in your web browser.
+                </p>
+                
+                <div class="code-block">
+                    <pre><code>ssh root@192.168.1.1
+# Default password is usually blank</code></pre>
+                </div>
+                
+                <figure class="image-full">
+                    <img src="images/openwrt-login.jpg" alt="OpenWrt login screen">
+                    <figcaption>The OpenWrt login screen - you'll need to set a password on first login</figcaption>
+                </figure>
+            </section>
+
+            <section id="wifi-configuration">
+                <h2>Wi-Fi Configuration</h2>
+                <p>
+                    Now we'll set up the dual Wi-Fi configuration - one interface to connect to an existing network, and one to create our own network.
+                </p>
+                
+                <h3>Step 3: Configure Wi-Fi Interfaces</h3>
+                <p>
+                    In the OpenWrt interface, navigate to Network → Wireless and configure both interfaces:
+                </p>
+                
+                <ul>
+                    <li>The built-in Wi-Fi: Set as an access point (creates your network)</li>
+                    <li>USB Wi-Fi adapter: Set as a client (connects to hotel/external Wi-Fi)</li>
+                </ul>
+                
+                <div class="code-block">
+                    <pre><code># Example configuration in /etc/config/wireless
+config wifi-device 'radio0'
+    option type 'mac80211'
+    option channel '36'
+    option hwmode '11a'
+    option path 'platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1'
+    option htmode 'VHT80'
+    option country 'US'
+
+config wifi-iface 'default_radio0'
+    option device 'radio0'
+    option network 'lan'
+    option mode 'ap'
+    option ssid 'TravelRouter'
+    option encryption 'psk2'
+    option key 'yourpassword'</code></pre>
+                </div>
+            </section>
+
+            <section id="next-steps">
+                <h2>Next Steps</h2>
+                <p>
+                    In the next part of this tutorial, we'll cover:
+                </p>
+                <ul>
+                    <li>Setting up a VPN for secure browsing</li>
+                    <li>Configuring ad-blocking with Pi-hole</li>
+                    <li>Creating a portable media server</li>
+                    <li>Optimizing battery life</li>
+                </ul>
+                <p>
+                    <a href="setup.html">Continue to the Setup Guide →</a>
+                </p>
+            </section>
+        </article>
+        
+        <aside class="sidebar">
+            <div class="author-card">
+                <img src="images/author.jpg" alt="Author photo" class="author-image">
+                <h3>Your Name</h3>
+                <p>Tech enthusiast and Raspberry Pi tinkerer. I love creating practical solutions to everyday problems.</p>
+                <div class="social-links">
+                    <a href="#" target="_blank">Twitter</a>
+                    <a href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+            
+            <div class="related-posts">
+                <h3>Related Projects</h3>
+                <ul>
+                    <li><a href="#">Setting Up Pi-hole for Network-wide Ad Blocking</a></li>
+                    <li><a href="#">Creating a Home Media Server with Raspberry Pi</a></li>
+                    <li><a href="#">DIY Smart Home Hub with Raspberry Pi</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Travel Router Tutorial. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
