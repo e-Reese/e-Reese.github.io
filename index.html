@@ -44,9 +44,6 @@
                     My purpose for building this travel router was to solve the problem of hotel Wi-Fi that limits connections to one device and to create a secure network while traveling. In this tutorial, 
                     I'll walk you through how I built a portable travel router using a Raspberry Pi that solved these problems.
                 </p>
-                <p>
-                    This guide will take you through the entire process from gathering components to configuring the software and using your router on the go.
-                </p>
             </section>
 
             <section id="materials">
@@ -70,13 +67,20 @@
             </section>
 
             <section id="os-setup">
-                <h2>Raspbian OS Setup</h2>
+                <h2>Raspberry Pi OS Setup</h2>
                 
-                <h3>Step 1: Download and Flash Raspbian OS</h3>
+                <h3>Step 1: Download Raspberry Pi Imager</h3>
                 <p>
-                    First, download the appropriate RaspAP image for your Raspberry Pi model from the 
-                    <a href="https://RaspAP.org/toh/raspberry_pi_foundation/raspberry_pi" target="_blank">official RaspAP site</a>.
+                    First, download the Raspberry Pi Imager from the 
+                    <a href="https://www.raspberrypi.com/software/" target="_blank">official Raspberry Pi site</a>.
                 </p>
+                <p>
+                    Once downloaded, open the imager and select the Raspberry Pi OS (64-bit) image. Select the SD card and click "Write" to flash the image to the SD card.
+                </p>
+                <div class="featured-image">
+                    <img src="images/RaspPiImager.png" alt="Raspberry Pi Travel Router Setup">
+                    <p class="caption">Raspberry Pi Imager Settings</p>
+                </div>
                 
                 <div class="code-block">
                     <pre><code># Flash the image to your SD card
