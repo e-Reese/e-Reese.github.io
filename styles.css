@@ -125,6 +125,8 @@ main {
 /* Article styles */
 article {
     font-family: var(--font-serif);
+    width: 100%;
+    padding: 0;
 }
 
 .article-header {
@@ -372,9 +374,8 @@ footer p {
 
 /* Responsive design */
 @media (max-width: 992px) {
-    main {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    main.container {
+        max-width: 95%;
     }
     
     .sidebar {
