@@ -184,11 +184,35 @@ sudo reboot
                     I found that I needed to skip the "arm_64bit=0" step.
                 </p>
             </section>
+            
+
+            <section id="configuration">
+                <h2>Basic Configuration</h2>
+                <p>
+                    Now that RaspAP is running and the second Wi-Fi antenna drivers are installed, you'll need to access RaspAP's web interface to configure it.
+                </p>
+                
+                <h3>Step 4: Configure RaspAP</h3>
+                <p>
+                    Navigate to 10.9.141.1 in your web browser on your Pi. The default username is "admin" and the default password is "secret".
+                </p>
+                
+                <figure class="image-full">
+                    <img src="images/RaspAP_AdminLogin.png" alt="RaspAP login screen">
+                    <figcaption>The RaspAP login screen</figcaption>
+                </figure>
+
+
+            </section>
+
+
 
             <section id="wifi-configuration">
-                <h2>Wi-Fi Configuration</h2>
+                <h2>Wi-Fi and RaspAP Configuration</h2>
                 <p>
-                    Now we'll set up the dual Wi-Fi configuration - one interface to connect to an existing network, and one to create our own network.
+                    Now that the drivers are installed, we'll configure the Wi-Fi and RaspAP interfaces. 
+                    
+                    It is likely that the builtin antenna is faster and has better range than the external antenna. This means that we need to switch the  (if this isn't the case, you can skip the part where we switch the hot) 
                 </p>
                 
                 <h3>Step 4: Configure Wi-Fi Interfaces</h3>
@@ -235,28 +259,10 @@ config wifi-iface 'default_radio0'
                 </p>
             </section>
         </article>
-            
-
-            <section id="configuration">
-                <h2>Basic Configuration</h2>
-                <p>
-                    Now that RaspAP is running and the second Wi-Fi antenna is configured, you'll need to access RaspAP's web interface to configure it.
-                </p>
-                
-                <h3>Step 5: Access the Web Interface</h3>
-                <p>
-                    Navigate to 10.9.141.1 in your web browser on your Pi. The default username is "admin" and the default password is "secret".
-                </p>
-                
-                <figure class="image-full">
-                    <img src="images/RaspAP_AdminLogin.png" alt="RaspAP login screen">
-                    <figcaption>The RaspAP login screen</figcaption>
-                </figure>
-            </section>
 
             
         
-        <aside class="sidebar">
+        <!-- <aside class="sidebar">
             <div class="author-card">
                 <img src="images/author.jpg" alt="Author photo" class="author-image">
                 <h3>Your Name</h3>
@@ -275,7 +281,7 @@ config wifi-iface 'default_radio0'
                     <li><a href="#">DIY Smart Home Hub with Raspberry Pi</a></li>
                 </ul>
             </div>
-        </aside>
+        </aside> -->
     </main>
 
     <footer>
