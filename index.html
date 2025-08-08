@@ -258,8 +258,34 @@ sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
 sudo reboot
                     </code></pre>
                 </div>
+            </section>
 
 
+            <section id="screen-setup">
+                <h2>Screen Setup</h2>
+                <p>
+                    Now that the system is configured, we'll set up the screen.
+                </p>
+                <h3>Step 5: Screen Setup</h3>
+                <p>
+                    First, we'll install the screen's drivers. I used the screen found <a href="https://www.amazon.com/dp/B07XBVF1C9?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code>
+sudorm -rf LCD-show
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCDf-show
+cd LCD-show/
+sudo ./MPI4008-show
+
+sudo shutdown -h now
+                    </code></pre>
+                </div>
+                <p>
+                    Once the Pi is turned off, install the screen. <br>
+                    Make sure to follow the specific instructions that come with your particular screen. <br>
+                </p>
             </section>
 
 
