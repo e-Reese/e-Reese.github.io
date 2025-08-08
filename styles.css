@@ -116,11 +116,10 @@ nav ul li a.active {
 
 /* Main layout */
 main {
-    display: grid;
-    grid-template-columns: minmax(0, var(--article-width)) 1fr;
-    gap: 60px;
+    display: block;
+    margin: 0 auto;
+    max-width: var(--article-width);
     margin-bottom: 60px;
-    justify-content: center;
 }
 
 /* Article styles */
@@ -139,9 +138,9 @@ article {
     font-size: 0.9rem;
 }
 
-/* .meta span {
+.meta span {
     margin-right: 15px;
-} */
+}
 
 .featured-image {
     margin-bottom: 30px;
