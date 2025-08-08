@@ -152,65 +152,37 @@ curl -sL https://install.raspap.com | bash
                 <h3>Step 3: Install WiFi Antenna drivers</h3>
                 <p>
                     This process is slightly different depending on the type of antenna you're using. I chose the RTL8811CU found <a href="https://www.amazon.com/dp/B087JX8X17?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>.
-                    The RTL8811CU was not the best choice, as it wasn not plug and play, however there are many other recommended antennas that can be found online. Below is the process for the RTL8811CU.
-                </p>
-                <p>
-                    Install required headers.
+                    The RTL8811CU was not the best choice, as it wasn not plug and play, however there are many other recommended antennas that can be found online.
+
+                    Below is the process for the RTL8811CU:
                 </p>
                 <div class="code-block">
                     <pre><code># Install required headers
 sudo apt install -y raspberrypi-kernel-headers build-essential bc dkms git
-                    </code></pre>
-                </div>
-                <p>
-                    Create a directory for the driver.
-                </p>
-                <div class="code-block">
-                    <pre><code># Create a directory for the driver
-mkdir -p ~/src
-                    </code></pre>
-                </div>
-                <p>
-                    Access the directory.
-                </p>
-                <div class="code-block">
-                    <pre><code># Access the directory
-cd ~/src
-                    </code></pre>
-                </div>
-                <p>
-                    Download driver repository.
-                </p>
-                <div class="code-block">
-                    <pre><code># Download driver repository
-git clone https://github.com/morrownr/8821cu-20210916.git
-                    </code></pre>
-                </div>
-                <p>
-                    Access the driver repository.
-                </p>
-                <div class="code-block">
-                    <pre><code># Access the driver repository
-cd ~/src/8821cu-20210916
-                    </code></pre>
-                </div>
 
-                <p>
-                    Install the driver.
-                </p>
-                <div class="code-block">
-                    <pre><code># Install the driver
+# Create a directory for the driver
+mkdir -p ~/src
+
+# Access the directory
+cd ~/src
+
+# Download driver repository.
+git clone https://github.com/morrownr/8821cu-20210916.git
+
+# Access the driver repository.
+cd ~/src/8821cu-20210916
+
+# Install the driver.
 sudo ./install-driver.sh
-                    </code></pre>
-                </div>
-                <p>
-                    Reboot
-                </p>
-                <div class="code-block">
-                    <pre><code># Reboot the system
+
+# Reboot
 sudo reboot
                     </code></pre>
                 </div>
+                <p>
+                    If you're using a different antenna, the process will be different. For the documentation I used to get the RTL8811CU working, see <a href="https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-setup-a-rtl881cu-usb-wifi-adapter-with-the-raspberry-pi-4" target="_blank">here</a>.
+                    I found that I needed to skip the "arm_64bit=0" step.
+                </p>
             </section>
 
             <section id="wifi-configuration">
@@ -219,7 +191,7 @@ sudo reboot
                     Now we'll set up the dual Wi-Fi configuration - one interface to connect to an existing network, and one to create our own network.
                 </p>
                 
-                <h3>Step 3: Configure Wi-Fi Interfaces</h3>
+                <h3>Step 4: Configure Wi-Fi Interfaces</h3>
                 <p>
                     In the RaspAP interface, navigate to Network → Wireless and configure both interfaces:
                 </p>
@@ -271,7 +243,7 @@ config wifi-iface 'default_radio0'
                     Now that RaspAP is running and the second Wi-Fi antenna is configured, you'll need to access RaspAP's web interface to configure it.
                 </p>
                 
-                <h3>Step 4: Access the Web Interface</h3>
+                <h3>Step 5: Access the Web Interface</h3>
                 <p>
                     Navigate to 10.9.141.1 in your web browser on your Pi. The default username is "admin" and the default password is "secret".
                 </p>
