@@ -94,13 +94,10 @@
                 <h3>Step 2: Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
 
                 <div class="code-block">
-                    <pre>
-                        <code># Confirm OS is up to date
+                    <pre><code># Confirm OS is up to date
 sudo apt-get update
 sudo apt-get full-upgrade
-sudo reboot
-                        </code>
-                    </pre>
+sudo reboot</code></pre>
                 </div>
                 
                 <p>
@@ -108,8 +105,7 @@ sudo reboot
                 </p>
                 <div class="code-block">
                     <pre><code># Set WiFi country
-sudo raspi-config
-                    </code></pre>
+sudo raspi-config</code></pre>
                 </div>
                 <div class="featured-image">
                     <img src="images/Raspi-config_window.png" alt="Raspberry Pi WiFi Country Configuration">
@@ -126,8 +122,7 @@ sudo raspi-config
                 </p>
                 <div class="code-block">
                     <pre><code># Invoke RaspAP's Quick Installer
-curl -sL https://install.raspap.com | bash
-                    </code></pre>
+curl -sL https://install.raspap.com | bash</code></pre>
                 </div>
                 <p>
                     At the end of the install process, accept the prompt to reboot your system. 
@@ -178,8 +173,7 @@ cd ~/src/8821cu-20210916
 sudo ./install-driver.sh
 
 # Reboot
-sudo reboot
-                    </code></pre>
+sudo reboot</code></pre>
                 </div>
                 <p>
                     If you're using a different antenna, the process will be different. For the documentation I used to get the RTL8811CU working, see <a href="https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-setup-a-rtl881cu-usb-wifi-adapter-with-the-raspberry-pi-4" target="_blank">here</a>.
@@ -237,8 +231,7 @@ sudo reboot
                 </p>
                 <div class="code-block">
                     <pre><code># Delete old Wlan0 configuration
-sudo nano /etc/dhcpcd.conf
-                    </code></pre>
+sudo nano /etc/dhcpcd.conf</code></pre>
                 </div>
                 <p>
                     Delete the five lines for wlan0, starting with the line that says "# RaspAP wlan0 configuration". Use arrow keys to navigate to the line and Control + K to delete the line. <br>
@@ -257,8 +250,7 @@ sudo rm /etc/NetworkManager/system-connections/preconfigured.nmconnection
 sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
 
 # Finally, reboot the system.
-sudo reboot
-                    </code></pre>
+sudo reboot</code></pre>
                 </div>
             </section>
 
@@ -281,56 +273,14 @@ chmod -R 755 LCDf-show
 cd LCD-show/
 sudo ./MPI4008-show
 
-sudo shutdown -h now
-                    </code></pre>
+sudo shutdown -h now</code></pre>
                 </div>
                 <p>
                     Once the Pi is turned off, install the screen. <br>
                     Make sure to follow the specific instructions that come with your particular screen. <br>
                 </p>
             </section>
-
-
-
-
-
-            <section id="wifi-configuration">
-                <h2>Wi-Fi and RaspAP Configuration</h2>
-                <p>
-                    Now that the drivers are installed, we'll configure the Wi-Fi and RaspAP interfaces. 
-                    
-                    It is likely that the builtin antenna is faster and has better range than the external antenna. This means that we need to switch the  (if this isn't the case, you can skip the part where we switch the hot) 
-                </p>
-                
-                <h3>Step 4: Configure Wi-Fi Interfaces</h3>
-                <p>
-                    In the RaspAP interface, navigate to Network → Wireless and configure both interfaces:
-                </p>
-                
-                <ul>
-                    <li>The built-in Wi-Fi: Set as an access point (creates your network)</li>
-                    <li>USB Wi-Fi adapter: Set as a client (connects to hotel/external Wi-Fi)</li>
-                </ul>
-                
-                <div class="code-block">
-                    <pre><code># Example configuration in /etc/config/wireless
-config wifi-device 'radio0'
-    option type 'mac80211'
-    option channel '36'
-    option hwmode '11a'
-    option path 'platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1'
-    option htmode 'VHT80'
-    option country 'US'
-
-config wifi-iface 'default_radio0'
-    option device 'radio0'
-    option network 'lan'
-    option mode 'ap'
-    option ssid 'TravelRouter'
-    option encryption 'psk2'
-    option key 'yourpassword'</code></pre>
-                </div>
-            </section>
+            
 
             <section id="next-steps">
                 <h2>Next Steps</h2>
