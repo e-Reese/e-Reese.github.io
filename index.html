@@ -228,11 +228,41 @@ sudo reboot
                 <p>
                     Go to the "Advanced" tab at the top and confirm the country code is set to the country where you're located.
                 </p>
-                
 
+                <p>
+                    Now that the settings are configured in the RaspAP interface, we'll need to clean up old WiFi configurations still in the .conf files. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code># Delete old Wlan0 configuration
+sudo nano /etc/dhcpcd.conf
+                    </code></pre>
+                </div>
+                <p>
+                    Delete the five lines for wlan0, starting with the line that says "# RaspAP wlan0 configuration". Use arrow keys to navigate to the line and Control + K to delete the line. <br>
+                    The "RaspAP wlan1 configuration" lines should be left alone.<br>
+                    Save and exit the file by pressing Control + X, then Y, then Enter.
+                </p>
+                <p>
+                    Next, delete any pre-configured network entries in the system. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code># Delete pre-configured network entries
+sudo rm /etc/NetworkManager/system-connections/preconfigured.nmconnection
+
+# Then, delete any WPA Supplicant entries by removing the wpa_supplicant.conf file.
+sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
+
+# Finally, reboot the system.
+sudo reboot
+                    </code></pre>
+                </div>
 
 
             </section>
+
+
 
 
 
