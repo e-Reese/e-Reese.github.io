@@ -67,9 +67,9 @@
             </section>
 
             <section id="os-setup">
-                <h2>Raspberry Pi OS Setup</h2>
+                <h2>Step 1: Raspberry Pi OS Setup</h2>
                 
-                <h3>Step 1: Download Raspberry Pi Imager</h3>
+                <h3>Download Raspberry Pi Imager</h3>
                 <p>
                     First, download the Raspberry Pi Imager from the 
                     <a href="https://www.raspberrypi.com/software/" target="_blank">official Raspberry Pi site</a>.
@@ -89,12 +89,12 @@
             </section>
 
             <section id="software-setup">
-                <h2>Software Setup</h2>
+                <h2>Step 2: RaspAP Installation</h2>
                 <p>
                     We'll be using RaspAP as our router's operating system.
                 </p>
                 
-                <h3>Step 2: Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
+                <h3>Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
 
                 <div class="code-block">
                     <pre><code># Confirm OS is up to date
@@ -146,12 +146,12 @@ curl -sL https://install.raspap.com | bash</code></pre>
             </section>
 
             <section id="wifi-antenna-configuration">
-                <h2>Wi-Fi Antenna Configuration</h2>
+                <h2>Step 3:Wi-Fi Antenna Configuration</h2>
                 <p>
                     Now we'll set up the dual Wi-Fi configuration - one antenna to connect to an existing network, and one to create our own network.
                 </p>
                 
-                <h3>Step 3: Install WiFi Antenna drivers</h3>
+                <h3> Install WiFi Antenna drivers</h3>
                 <p>
                     This process is slightly different depending on the type of antenna you're using. I chose the RTL8811CU found <a href="https://www.amazon.com/dp/B087JX8X17?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>.
                     The RTL8811CU was not the best choice, as it wasn not plug and play, however there are many other recommended antennas that can be found online.
@@ -189,13 +189,9 @@ sudo reboot</code></pre>
 
 
             <section id="configuration">
-                <h2>Basic Configuration</h2>
+                <h2>Step 4: Configure RaspAP</h2>
                 <p>
-                    Now that RaspAP is running and the second Wi-Fi antenna drivers are installed, you'll need to access RaspAP's web interface to configure it.
-                </p>
-                
-                <h3>Step 4: Configure RaspAP</h3>
-                <p>
+                    Now that RaspAP is running and the second Wi-Fi antenna drivers are installed, you'll need to access RaspAP's web interface to configure it. <br>
                     Navigate to 10.9.141.1 in your web browser on your Pi. The default username is "admin" and the default password is "secret".
                 </p>
                 
@@ -206,7 +202,8 @@ sudo reboot</code></pre>
 
                 <p>
                     It is likely that the builtin antenna is faster and has better range than the external antenna. 
-                    This means that we need to switch which antenna is used for a hotspot and which is used to connect to the internet. 
+                    This means that we need to switch which antenna is used for a hotspot and which is used to connect to the internet. <br>
+                    If this is not the case for your setup, you can skip this step.
                 </p>
                 <figure class="image-full">
                     <img src="images/WLAN1_Config_RaspAP.png" alt="RaspAP Hotspot Interface Configuration">
@@ -261,12 +258,9 @@ sudo reboot</code></pre>
 
 
             <section id="screen-setup">
-                <h2>Screen Setup</h2>
+                <h2>Step 5: Screen Setup<</h2>
                 <p>
-                    Now that the system is configured, we'll set up the screen.
-                </p>
-                <h3>Step 5: Screen Setup</h3>
-                <p>
+                    Now that the system is configured, we'll set up the screen. <br>
                     First, we'll install the screen's drivers. I used the screen found <a href="https://www.amazon.com/dp/B07XBVF1C9?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>. <br>
                     In terminal:
                 </p>
