@@ -86,7 +86,7 @@
             <section id="software-setup">
                 <h2>Software Setup</h2>
                 <p>
-                    We'll be using RaspAP as our router operating system.
+                    We'll be using RaspAP as our router's operating system.
                 </p>
                 
                 <h3>Step 2: Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
@@ -186,6 +186,7 @@ sudo reboot
             </section>
             
 
+
             <section id="configuration">
                 <h2>Basic Configuration</h2>
                 <p>
@@ -201,6 +202,34 @@ sudo reboot
                     <img src="images/RaspAP_AdminLogin.png" alt="RaspAP login screen">
                     <figcaption>The RaspAP login screen</figcaption>
                 </figure>
+
+                <p>
+                    It is likely that the builtin antenna is faster and has better range than the external antenna. 
+                    This means that we need to switch which antenna is used for a hotspot and which is used to connect to the internet. 
+                </p>
+                <figure class="image-full">
+                    <img src="images/WLAN1_Config_RaspAP.png" alt="RaspAP Hotspot Interface Configuration">
+                    <figcaption>RaspAP Hotspot Interface Configuration</figcaption>
+                </figure>
+                <p>
+                    Go to the "Hotspot" tab on the left side of the screen and set the "Interface" to the external antenna (wlan1 likely).
+                </p>
+                <figure class="image-full">
+                    <img src="images/PasswordReset_RaspAP_Hotspot.png" alt="RaspAP hotspot password reset">
+                    <figcaption>RaspAP hotspot password reset</figcaption>
+                </figure>
+                <p>
+                    Go to the "Security" tab at the top and change the password for the hotspot.
+                </p>
+                <figure class="image-full">
+                    <img src="images/RaspAP_Hotspot_CountryCodeConfig.png" alt="RaspAP hotspot country code configuration">
+                    <figcaption>RaspAP hotspot country code configuration</figcaption>
+                </figure>
+                <p>
+                    Go to the "Advanced" tab at the top and confirm the country code is set to the country where you're located.
+                </p>
+                
+
 
 
             </section>
@@ -254,9 +283,6 @@ config wifi-iface 'default_radio0'
                     <li>Setting up a VPN for secure browsing</li>
                     <li>Configuring ad-blocking with Pi-hole</li>
                 </ul>
-                <p>
-                    <a href="setup.html">Continue to the Setup Guide →</a>
-                </p>
             </section>
         </article>
 
