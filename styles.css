@@ -120,6 +120,7 @@ main {
     grid-template-columns: minmax(0, var(--article-width)) 1fr;
     gap: 60px;
     margin-bottom: 60px;
+    justify-content: center;
 }
 
 /* Article styles */
