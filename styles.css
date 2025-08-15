@@ -605,6 +605,12 @@ footer p {
     font-size: 1rem;
 }
 
+/* Project page styles */
+.cta-button {
+    margin: 30px 0;
+    text-align: center;
+}
+
 /* Contact Page */
 .contact-content {
     display: grid;
