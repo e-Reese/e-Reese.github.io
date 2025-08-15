@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Raspberry Pi Travel Router</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Ethan Reese</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container article-page">
+        <article>
+            <header class="article-header">
+                <h1>Building a Raspberry Pi Travel Router</h1>
+                <div class="meta">
+                    <span class="author">By Ethan Reese</span>
+                    <span class="date">August 7, 2023</span>
+                </div>
+                <div class="featured-image">
+                    <img src="images/RaspAp_TravelRouter.jpeg" alt="Raspberry Pi Travel Router Setup">
+                    <p class="caption">My complete travel router setup using a Raspberry Pi 4</p>
+                </div>
+            </header>
+
+            <section class="intro">
+                <p>
+                    My purpose for building this travel router was to solve the problem of hotel Wi-Fi that limits connections to one device and to create a secure network while traveling. In this tutorial, 
+                    I'll walk you through how I built a portable travel router using a Raspberry Pi that solved these problems. <br>
+                    My solution to guest portal login pages was to use a mini touch screen and keyboard to manually pass the login pages to the Pi. I'm currently working on an automated solution for this.<br>
+                    <br>
+                    This tutorial is a work in progress. I'll be adding more sections as I go.
+                </p>
+            </section>
+
+            <section id="materials">
+                <h2>What You'll Need</h2>
+                <ul class="materials-list">
+                    <li>A laptop or desktop computer</li>
+                    <li>Raspberry Pi (I used a Pi 4, but Pi 3B+ works too)</li>
+                    <li>MicroSD card (16GB or larger recommended)</li>
+                    <li>USB Wi-Fi adapter (for dual Wi-Fi capability) (I used <a href="https://www.amazon.com/dp/B087JX8X17?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">this one</a> but there are better options)</li>
+                    <li>USB-C 5v Power Supply (for powering the Pi)</li>
+                    <li>A monitor, keyboard, and mouse (my prefered method)</li>
+                    <li>Mini screen and keyboard (for passing guest portal login pages) (I used <a href="https://www.amazon.com/dp/B07XBVF1C9?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">this screen</a> and <a href="https://www.amazon.com/Fosmon-Portable-Lightweight-Bluetooth-Controller/dp/B00BX0YKX4/ref=sr_1_3?crid=240CCA95FAZMO&dib=eyJ2IjoiMSJ9.HxYms7ZjD34YuUAV6204cxX-aLU6Upcnn0EZL7QGmmJbibnoOddyu3YOc4xBMmRazuxFd04ZwfscFJ4e40JYw5CW1KjWS0g68NJZct5mzjlvUsUYQc-IpbcHf7v2sprSEmRM6kP0Jki6_oFy4K9je2g0U7DBC7Y5v_j7mVed3jTv9UNbBINKaii9qmPpKd_HPkYpDyCYJ4UfM68nu1iQZgSSEnvWpV6Oop4RpeMt3sE.V4DunpRZcNnvUTe_5y-mX6ZbgeBdX-aNxYoMF36h-g0&dib_tag=se&keywords=mini+keyboard&qid=1754588483&sprefix=mini+k%2Caps%2C134&sr=8-3" target="_blank">this keyboard)</a></li>
+                    <li>Ethernet cable (optional for connecting via ssh)</li>
+                    <li>Portable power bank (optional)</li>
+                </ul>
+                <div class="image-grid">
+                    <figure>
+                        <img src="images/components.jpg" alt="Components needed for the travel router">
+                        <figcaption>All the components laid out before assembly</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="os-setup">
+                <h2>Step 1: Raspberry Pi OS Setup</h2>
+                
+                <h3>Download Raspberry Pi Imager</h3>
+                <p>
+                    First, download the Raspberry Pi Imager from the 
+                    <a href="https://www.raspberrypi.com/software/" target="_blank">official Raspberry Pi site</a>.
+                </p>
+                <p>
+                    Once downloaded, open the imager and select the Raspberry Pi OS (64-bit) image. Select the SD card and click "Next", then "Write" to flash the image to the SD card.
+                </p>
+                <div class="featured-image">
+                    <img src="images/RaspPiImager.png" alt="Raspberry Pi Imager Settings">
+                    <p class="caption">Raspberry Pi Imager Settings</p>
+                </div>
+                
+                <p>
+                    After flashing, insert the SD card into your Raspberry Pi, connect it to your monitor, keyboard, and mouse, and power it on.
+                    Alternatively, you can connect it to your computer via Ethernet and use the terminal to configure it (official documentation <a href="https://www.raspberrypi.com/documentation/computers/remote-access.html " target="_blank">here</a>).
+                </p>
+            </section>
+
+            <section id="software-setup">
+                <h2>Step 2: RaspAP Installation</h2>
+                <p>
+                    I chose to use RaspAP for the router's operating system because of it's ease of use and immediate VPN and ad-blocking capabilities. <br>
+                </p>
+                
+                <h3>Update OS, Set WiFi Country, Invoke RaspAP's Quick Installer</h3>
+
+                <div class="code-block">
+                    <pre><code># Confirm OS is up to date
+sudo apt-get update
+sudo apt-get full-upgrade
+sudo reboot</code></pre>
+                </div>
+                
+                <p>
+                    Set the WiFi country to the country where you're located.
+                </p>
+                <div class="code-block">
+                    <pre><code># Set WiFi country
+sudo raspi-config</code></pre>
+                </div>
+                <div class="featured-image">
+                    <img src="images/Raspi-config_window.png" alt="Raspberry Pi WiFi Country Configuration">
+                    <p class="caption">Raspberry Pi WiFi Country Configuratio</p>
+                </div>
+                <p>
+                    <ul>
+                        <li>Select "Localisation Options"</li>
+                        <li>Select "Change WiFi Country"</li>
+                        <li>Select your country</li>
+                    </ul>
+                </p>
+
+                <p>
+                    Invoke RaspAP's Quick Installer.
+                </p>
+                <div class="code-block">
+                    <pre><code># Invoke RaspAP's Quick Installer
+curl -sL https://install.raspap.com | bash</code></pre>
+                </div>
+                <p>
+                    At the end of the install process, accept the prompt to reboot your system. 
+                    The default configuration is as follows:
+                    <ul>
+                        <li>IP address: 10.3.141.1</li>
+                        <li>Username: admin</li>
+                        <li>Password: secret</li>
+                        <li>DHCP range: 10.3.141.50 — 10.3.141.254</li>
+                        <li>SSID: RaspAP</li>
+                        <li>Password: ChangeMe</li>
+                    </ul>
+                    For the offical documentation on installing RaspAP, see <a href="https://raspap.com/#quick" target="_blank">here</a>.
+                </p>
+
+            </section>
+
+            <section id="wifi-antenna-configuration">
+                <h2>Step 3:Wi-Fi Antenna Configuration</h2>
+                <p>
+                    Next, set up the dual Wi-Fi configuration. One antenna to connect to an existing network, and one to create your own network.
+                </p>
+                
+                <h3> Install WiFi Antenna drivers</h3>
+                <p>
+                    This process is slightly different depending on the type of antenna you're using. I chose the RTL8811CU found <a href="https://www.amazon.com/dp/B087JX8X17?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>.
+                    The RTL8811CU was not the best choice, as it wasn not plug and play, however there are many other recommended antennas that can be found online.
+
+                    Below is the process for the RTL8811CU:
+                </p>
+                <div class="code-block">
+                    <pre><code># Install required headers
+sudo apt install -y raspberrypi-kernel-headers build-essential bc dkms git
+
+# Create a directory for the driver
+mkdir -p ~/src
+
+# Access the directory
+cd ~/src
+
+# Download driver repository.
+git clone https://github.com/morrownr/8821cu-20210916.git
+
+# Access the driver repository.
+cd ~/src/8821cu-20210916
+
+# Install the driver.
+sudo ./install-driver.sh
+
+# Reboot
+sudo reboot</code></pre>
+                </div>
+                <p>
+                    If you're using a different antenna, the process will be different. For the documentation I used to get the RTL8811CU working, see <a href="https://thepihut.com/blogs/raspberry-pi-tutorials/how-to-setup-a-rtl881cu-usb-wifi-adapter-with-the-raspberry-pi-4" target="_blank">here</a>.
+                    I found that I needed to skip the "arm_64bit=0" step.
+                </p>
+            </section>
+            
+
+
+            <section id="configuration">
+                <h2>Step 4: Configure RaspAP</h2>
+                <p>
+                    Now that RaspAP is running and the second Wi-Fi antenna drivers are installed, you'll need to access RaspAP's web interface to configure it. <br>
+                    Navigate to 10.9.141.1 in your web browser on your Pi. The default username is "admin" and the default password is "secret".
+                </p>
+                
+                <figure class="image-full">
+                    <img src="images/RaspAP_AdminLogin.png" alt="RaspAP login screen">
+                    <figcaption>The RaspAP login screen</figcaption>
+                </figure>
+
+                <p>
+                    It is likely that the builtin antenna is faster and has better range than the external antenna. 
+                    This means that we need to switch which antenna is used for a hotspot and which is used to connect to the internet. <br>
+                    If this is not the case for your setup, you can skip this step.
+                </p>
+                <figure class="image-full">
+                    <img src="images/WLAN1_Config_RaspAP.png" alt="RaspAP Hotspot Interface Configuration">
+                    <figcaption>RaspAP Hotspot Interface Configuration</figcaption>
+                </figure>
+                <p>
+                    Go to the "Hotspot" tab on the left side of the screen and set the "Interface" to the external antenna (wlan1 likely).
+                </p>
+                <figure class="image-full">
+                    <img src="images/PasswordReset_RaspAP_Hotspot.png" alt="RaspAP hotspot password reset">
+                    <figcaption>RaspAP hotspot password reset</figcaption>
+                </figure>
+                <p>
+                    Go to the "Security" tab at the top and change the password for the hotspot.
+                </p>
+                <figure class="image-full">
+                    <img src="images/RaspAP_Hotspot_CountryCodeConfig.png" alt="RaspAP hotspot country code configuration">
+                    <figcaption>RaspAP hotspot country code configuration</figcaption>
+                </figure>
+                <p>
+                    Go to the "Advanced" tab at the top and confirm the country code is set to the country where you're located.
+                </p>
+
+                <p>
+                    Now that the settings are configured in the RaspAP interface, the old WiFi configurations in the .conf files need to be removed. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code># Delete old Wlan0 configuration
+sudo nano /etc/dhcpcd.conf</code></pre>
+                </div>
+                <p>
+                    Delete the five lines for wlan0, starting with the line that says "# RaspAP wlan0 configuration". Use arrow keys to navigate to the line and Control + K to delete the line. <br>
+                    The "RaspAP wlan1 configuration" lines should be left alone.<br>
+                    Save and exit the file by pressing Control + X, then Y, then Enter.
+                </p>
+                <p>
+                    Next, delete any pre-configured network entries in the system. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code># Delete pre-configured network entries
+sudo rm /etc/NetworkManager/system-connections/preconfigured.nmconnection
+
+# Then, delete any WPA Supplicant entries by removing the wpa_supplicant.conf file.
+sudo rm /etc/wpa_supplicant/wpa_supplicant.conf
+
+# Finally, reboot the system.
+sudo reboot</code></pre>
+                </div>
+            </section>
+
+
+            <section id="screen-setup">
+                <h2>Step 5: Screen Setup</h2>
+                <p>
+                    Now that the system is configured, it's time to set up the screen. <br>
+                    First, install the screen's drivers. I used the screen found <a href="https://www.amazon.com/dp/B07XBVF1C9?ref=ppx_yo2ov_dt_b_fed_asin_title" target="_blank">here</a>. <br>
+                    In terminal:
+                </p>
+                <div class="code-block">
+                    <pre><code>
+sudorm -rf LCD-show
+git clone https://github.com/goodtft/LCD-show.git
+chmod -R 755 LCDf-show
+cd LCD-show/
+sudo ./MPI4008-show
+
+sudo shutdown -h now</code></pre>
+                </div>
+                <p>
+                    Once the Pi is turned off, install the screen. <br>
+                    Make sure to follow the specific instructions that come with your particular screen. <br>
+                </p>
+            </section>
+
+
+            <section id="next-steps">
+                <h2>Next Steps</h2>
+                <p>
+                    In the next part of this tutorial, I'll cover:
+                </p>
+                <ul>
+                    <li>Setting up a VPN for secure browsing</li>
+                    <li>Automating the guest portal login process (when a password/code isn't required)</li>
+                    <li>Configuring ad-blocking with Pi-hole</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ethan Reese. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -9,7 +9,9 @@
     --color-dark-gray: #757575;
     --color-accent: #03a87c;
     --color-link: #03a87c;
-    --container-width: 1080px;
+    --color-accent-light: #e6f7f2;
+    --color-accent-dark: #028a65;
+    --container-width: 1200px;
     --article-width: 700px;
 }
 
@@ -118,8 +120,11 @@ nav ul li a.active {
 main {
     display: block;
     margin: 0 auto;
-    max-width: var(--article-width);
     margin-bottom: 60px;
+}
+
+main.article-page {
+    max-width: var(--article-width);
 }
 
 /* Article styles */
@@ -372,6 +377,272 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Page Header */
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: var(--color-dark-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-light-gray);
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.lead {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--color-dark-gray);
+    font-family: var(--font-sans);
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-dark);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent-light);
+    text-decoration: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-accent-light);
+    text-decoration: none;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-bottom: 80px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.placeholder-image span {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-accent);
+    text-align: center;
+    padding: 20px;
+}
+
+.project-card:hover .placeholder-image {
+    background-color: var(--color-accent);
+}
+
+.project-card:hover .placeholder-image span {
+    color: white;
+}
+
+.project-content {
+    padding: 20px;
+    background-color: white;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: var(--color-dark-gray);
+}
+
+/* About Page */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    margin-bottom: 1.5em;
+}
+
+.about-text h2 {
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+}
+
+.about-text ul {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+}
+
+.about-text ul li {
+    margin-bottom: 0.5em;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+/* Contact Page */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-methods {
+    margin-top: 30px;
+}
+
+.contact-method {
+    margin-bottom: 20px;
+}
+
+.contact-method h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contact-method p {
+    margin-bottom: 0;
+    font-family: var(--font-sans);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
 /* Responsive design */
 @media (max-width: 992px) {
     main.container {
@@ -380,6 +651,15 @@ footer p {
     
     .sidebar {
         position: static;
+    }
+    
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
     }
 }
 
@@ -435,5 +715,23 @@ footer p {
     
     nav ul li {
         margin-bottom: 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 } 
