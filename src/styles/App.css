@@ -31,7 +31,7 @@ body {
 
 .container {
   width: 90%;
-  max-width: var(--container-width);
+  max-width: var(1fr);
   margin: auto;
   padding: 10px;
 }
