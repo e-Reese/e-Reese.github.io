@@ -1,0 +1,25 @@
+/* About Page */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  margin-bottom: 1.5em;
+}
+
+.about-text h2 {
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+.about-text ul {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.about-text ul li {
+  margin-bottom: 0.5em;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
