@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Ethan Reese - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for my personal portfolio website, showcasing my projects and professional experience. The site is built with React and TypeScript, and is hosted on GitHub Pages.
 
-## Available Scripts
+Visit the live site: [e-reese.github.io](https://e-reese.github.io)
+
+## Featured Projects
+
+- **Raspberry Pi Travel Router** - A custom travel router built with Raspberry Pi
+- **Noir: Immersive Puzzle Thriller** - An immersive ARG experience with custom hardware
+- **Alpaca Trader** - A Python implementation for trading options spread strategies
+
+## Technologies Used
+
+- React 19
+- TypeScript
+- React Router
+- CSS3
+- GitHub Pages
+
+
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run deploy` - Deploys the app to GitHub Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Deployment
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The site is deployed using GitHub Pages. To deploy:
 
-### `npm test`
+1. Run `npm run deploy`
+2. The site will be built and deployed to the `gh-pages` branch
+3. GitHub Pages will serve the content from this branch
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contact
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to reach out to me through the contact form on my website or via GitHub.
