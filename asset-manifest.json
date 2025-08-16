@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b413b54.css",
+    "main.js": "/static/js/main.6e486a12.js",
+    "static/js/453.78d5fc45.chunk.js": "/static/js/453.78d5fc45.chunk.js",
+    "static/media/AlpacaTraderThumbnail_Wide.png": "/static/media/AlpacaTraderThumbnail_Wide.0bf22bc9eb22ac7acc1b.png",
+    "static/media/RaspPiImager.png": "/static/media/RaspPiImager.62c2273a4292193dfdc3.png",
+    "static/media/RaspAp_TravelRouter_v2.jpeg": "/static/media/RaspAp_TravelRouter_v2.2f43234970e4bef2d84c.jpeg",
+    "static/media/Heist_NineGrid-Annotated_Med.jpeg": "/static/media/Heist_NineGrid-Annotated_Med.f93eeff4c9333cb5e893.jpeg",
+    "static/media/Heist_Strip_Generated_v1_Med.jpeg": "/static/media/Heist_Strip_Generated_v1_Med.c428bd927de558d5e930.jpeg",
+    "static/media/Heist_Controllers_Med.jpeg": "/static/media/Heist_Controllers_Med.6dee29a679a3a2e1fe96.jpeg",
+    "static/media/TravelRouter_Generated_v1_Med.jpeg": "/static/media/TravelRouter_Generated_v1_Med.5ab923116e0956a07e80.jpeg",
+    "static/media/Heist_LiveCameraScreen-Annotated_Med.jpeg": "/static/media/Heist_LiveCameraScreen-Annotated_Med.2aa81acfa505141721a9.jpeg",
+    "static/media/Heist_AudioAmps-Annotated_Med.jpeg": "/static/media/Heist_AudioAmps-Annotated_Med.c6618257116dbf123e96.jpeg",
+    "static/media/RaspAP_Hotspot_CountryCodeConfig.png": "/static/media/RaspAP_Hotspot_CountryCodeConfig.7f656d35bf4181ee63fd.png",
+    "static/media/PasswordReset_RaspAP_Hotspot.png": "/static/media/PasswordReset_RaspAP_Hotspot.ef41e4ee03dbb69d53ca.png",
+    "static/media/Heist_LEDFixture-Annotated_Med.jpeg": "/static/media/Heist_LEDFixture-Annotated_Med.594a782796b7a8966dc1.jpeg",
+    "static/media/RaspAP_AdminLogin.png": "/static/media/RaspAP_AdminLogin.9c8f0ea9bf6dee8801fb.png",
+    "static/media/WLAN1_Config_RaspAP.png": "/static/media/WLAN1_Config_RaspAP.9c51de805b18fa544eb7.png",
+    "static/media/Raspi-config_window.png": "/static/media/Raspi-config_window.90d49b39cfbab30c0788.png",
+    "static/media/Heist_Strip_v1_Med.jpeg": "/static/media/Heist_Strip_v1_Med.6a265b38f27854151b16.jpeg",
+    "index.html": "/index.html",
+    "main.7b413b54.css.map": "/static/css/main.7b413b54.css.map",
+    "main.6e486a12.js.map": "/static/js/main.6e486a12.js.map",
+    "453.78d5fc45.chunk.js.map": "/static/js/453.78d5fc45.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b413b54.css",
+    "static/js/main.6e486a12.js"
+  ]
+}
