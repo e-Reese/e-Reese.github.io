@@ -1,0 +1,196 @@
+/* Base styles */
+:root {
+  --font-serif: 'Libre Baskerville', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'Menlo', 'DejaVu Sans Mono', 'Consolas', 'Liberation Mono', 'Monaco', 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;
+  --color-text: #191919;
+  --color-background: #fcfaf6;
+  --color-light-gray: #f7f5f1;
+  --color-medium-gray: #e6e4df;
+  --color-dark-gray: #757575;
+  --color-accent: #191919;
+  --color-link: #03a87c;
+  --color-accent-light: #e6f7f2;
+  --color-accent-dark: #191919;
+  --container-width: 1200px;
+  --article-width: 700px;
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: 1.6;
+  background-color: var(--color-background);
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 10px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  margin-bottom: 0.8em;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-top: 1.8em;
+  margin-bottom: 0.7em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main layout */
+main {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+main.article-page {
+  max-width: var(--article-width);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-light);
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent-light);
+  text-decoration: none;
+}
+
+/* Page Header */
+.page-header {
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: var(--color-dark-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  main.container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons .btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+  }
+}
