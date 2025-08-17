@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b413b54.css",
+    "main.css": "/static/css/main.60b77190.css",
     "main.js": "/static/js/main.6e486a12.js",
     "static/js/453.78d5fc45.chunk.js": "/static/js/453.78d5fc45.chunk.js",
     "static/media/AlpacaTraderThumbnail_Wide.png": "/static/media/AlpacaTraderThumbnail_Wide.0bf22bc9eb22ac7acc1b.png",
@@ -20,12 +20,12 @@
     "static/media/Raspi-config_window.png": "/static/media/Raspi-config_window.90d49b39cfbab30c0788.png",
     "static/media/Heist_Strip_v1_Med.jpeg": "/static/media/Heist_Strip_v1_Med.6a265b38f27854151b16.jpeg",
     "index.html": "/index.html",
-    "main.7b413b54.css.map": "/static/css/main.7b413b54.css.map",
+    "main.60b77190.css.map": "/static/css/main.60b77190.css.map",
     "main.6e486a12.js.map": "/static/js/main.6e486a12.js.map",
     "453.78d5fc45.chunk.js.map": "/static/js/453.78d5fc45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b413b54.css",
+    "static/css/main.60b77190.css",
     "static/js/main.6e486a12.js"
   ]
 }
