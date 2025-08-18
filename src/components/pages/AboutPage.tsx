@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
     <Layout>
       <section className="page-header">
         <h1>About Me</h1>
-        <p>Learn more about my background and interests</p>
+        <p className="lead">Learn more about my background and interests</p>
       </section>
 
       <section className="about-content">

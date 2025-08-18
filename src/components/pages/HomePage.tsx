@@ -8,14 +8,16 @@ import '../../styles/Home.css';
 import raspberryPiRouterImage from '../../assets/images/TravelRouter_Generated_v1_Med.jpeg';
 import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.png';
 import heistStripImage from '../../assets/images/Heist_Strip_Generated_v1_Med.jpeg';
+import hexarThumbnailImage from '../../assets/images/Hexar_ProjectCardThumbnail_Wide_v2_Med.jpeg';
+import electricityDashboardImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';
 
 const HomePage: React.FC = () => {
   const featuredProjects: ProjectCardProps[] = [
     {
-      title: 'Raspberry Pi Travel Router',
-      description: 'A custom travel router built with Raspberry Pi that creates a secure network while traveling.',
-      imageUrl: raspberryPiRouterImage,
-      link: '/projects/travel-router'
+      title: 'Hexar AR',
+      description: 'Augmented reality collectables iOS app for fan engagement built with Unity and Azure.',
+      imageUrl: hexarThumbnailImage,
+      link: '/projects/hexar'
     },
     {
       title: 'Noir: Immersive Puzzle Thriller',
@@ -30,41 +32,23 @@ const HomePage: React.FC = () => {
       link: '/projects/alpaca-trader'
     },
     {
-      title: 'Weather Station',
-      description: 'A DIY weather station that collects and displays local weather data.',
-      imagePlaceholder: 'Weather Station',
-      link: '/projects/coming-soon'
+      title: 'Raspberry Pi Travel Router',
+      description: 'A custom travel router built with Raspberry Pi that creates a secure network while traveling.',
+      imageUrl: raspberryPiRouterImage,
+      link: '/projects/travel-router'
     },
     {
-      title: 'Fitness Tracker App',
-      description: 'A mobile application for tracking workouts and fitness progress.',
-      imagePlaceholder: 'Fitness Tracker App',
-      link: '/projects/coming-soon'
+      title: 'Divvy Bike Share Marketing Strategy',
+      description: 'A comprehensive marketing strategy for Divvy, Chicago\'s bike sharing service to increase user engagement and market penetration.',
+      imagePlaceholder: 'Divvy Bike Share',
+      link: '/projects/bike-share'
     },
     {
-      title: 'Recipe Management System',
-      description: 'A digital recipe book with meal planning and grocery list features.',
-      imagePlaceholder: 'Recipe Management System',
-      link: '/projects/coming-soon'
+      title: 'Electricity Dashboard',
+      description: 'An interactive web application for monitoring and analyzing electricity usage patterns and costs.',
+      imageUrl: electricityDashboardImage,
+      link: '/projects/electricity-dashboard'
     },
-    {
-      title: 'Home Media Server',
-      description: 'A self-hosted media server for streaming personal content to any device.',
-      imagePlaceholder: 'Home Media Server',
-      link: '/projects/coming-soon'
-    },
-    {
-      title: 'Language Learning Tool',
-      description: 'An application designed to help users learn new languages efficiently.',
-      imagePlaceholder: 'Language Learning Tool',
-      link: '/projects/coming-soon'
-    },
-    {
-      title: 'Task Management System',
-      description: 'A productivity tool for organizing tasks and managing projects.',
-      imagePlaceholder: 'Task Management System',
-      link: '/projects/coming-soon'
-    }
   ];
 
   return (

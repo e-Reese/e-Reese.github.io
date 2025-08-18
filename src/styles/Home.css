@@ -3,6 +3,8 @@
   padding: 0px 0;
   text-align: left;
   border-radius: 8px;
+  max-width: var(--container-width);
+  margin: 0 auto;
   /* margin-bottom: 60px; */
 }
 

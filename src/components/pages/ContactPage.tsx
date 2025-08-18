@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
     <Layout>
       <section className="page-header">
         <h1>Contact Me</h1>
-        <p>Get in touch for collaborations, questions, or just to say hello</p>
+        <p className="lead">Get in touch for collaborations, questions, or just to say hello</p>
       </section>
 
       <section className="contact-content">

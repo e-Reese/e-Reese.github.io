@@ -22,14 +22,19 @@ article {
   margin-right: 15px;
 }
 
-.featured-image {
+.featured-image, .featured-video {
   margin-bottom: 30px;
 }
 
-.featured-image img {
+.featured-image img, .featured-video video {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  object-fit: cover;
+}
+
+.header-video {
+  max-height: 500px;
 }
 
 .caption {

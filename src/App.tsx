@@ -9,6 +9,9 @@ import ContactPage from './components/pages/ContactPage';
 import TravelRouterPage from './components/pages/TravelRouterPage';
 import AlpacaTraderPage from './components/pages/AlpacaTraderPage';
 import NoirProjectPage from './components/pages/NoirProjectPage';
+import HexarPage from './components/pages/HexarPage';
+import BikeSharePage from './components/pages/BikeSharePage';
+import ElectricityDashboardPage from './components/pages/ElectricityDashboardPage';
 import ComingSoonPage from './components/pages/ComingSoonPage';
 import NotFoundPage from './components/pages/NotFoundPage';
 
@@ -26,6 +29,9 @@ const App: React.FC = () => {
         <Route path="/projects/travel-router" element={<TravelRouterPage />} />
         <Route path="/projects/noir" element={<NoirProjectPage />} />
         <Route path="/projects/alpaca-trader" element={<AlpacaTraderPage />} />
+        <Route path="/projects/hexar" element={<HexarPage />} />
+        <Route path="/projects/bike-share" element={<BikeSharePage />} />
+        <Route path="/projects/electricity-dashboard" element={<ElectricityDashboardPage />} />
         <Route path="/projects/coming-soon" element={<ComingSoonPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
