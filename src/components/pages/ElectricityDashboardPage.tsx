@@ -43,18 +43,16 @@ const ElectricityDashboardPage: React.FC = () => {
         </section>
 
         <section id="technology">
-          <h2>Technology Stack</h2>
-          <p>
-            The dashboard is built using modern web technologies to ensure performance, reliability, and a seamless user experience:
-          </p>
+          <h2>Technical Overview</h2>
+          <p>This dashboard shows electricity generation, sales, and revenue data from 2023 in an intuitive format.<br/>
+          Dashboard can be found <a href="https://public.tableau.com/views/Electricity-SalesAndGeneration/Generation?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link" target="_blank" rel="noopener noreferrer">here on Tableau</a>.
+          </p>  
           <ul>
-            <li><strong>Frontend:</strong> React.js with TypeScript for type safety and component architecture</li>
-            <li><strong>Data Visualization:</strong> D3.js and Chart.js for interactive and responsive charts</li>
-            <li><strong>Backend:</strong> Node.js with Express for API endpoints and data processing</li>
-            <li><strong>Database:</strong> MongoDB for time-series data storage with efficient querying</li>
-            <li><strong>Real-time Updates:</strong> WebSockets for live data streaming</li>
-            <li><strong>Authentication:</strong> JWT-based secure user authentication</li>
-            <li><strong>Deployment:</strong> Docker containers with CI/CD pipeline</li>
+            <li><strong>Data Cleaning & Formatting:</strong> SQL and Tableau</li>
+            <li><strong>Data Analyzation & Visualization:</strong> Tableau for interactive and responsive charts</li>
+            <li><strong>Data Source:</strong> Data drawn from the <a href="https://www.eia.gov/opendata/browser/" target="_blank" rel="noopener noreferrer">U.S. EIA Open Data Browser</a></li>
+            <li><strong>Database:</strong> MS SQL Server</li>
+            <li><strong>Code Repository:</strong> <a href="https://github.com/e-Reese/EnergyCaseStudy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
         </section>
 
@@ -159,3 +157,4 @@ const ElectricityDashboardPage: React.FC = () => {
 };
 
 export default ElectricityDashboardPage;
+
