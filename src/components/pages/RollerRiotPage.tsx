@@ -2,9 +2,8 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import '../../styles/ProjectDetail.css';
 
-// Import images - these will need to be added to the assets folder
-// import heroImage from '../../assets/images/RollerRiot_Hero.png';
-// import secondaryImage from '../../assets/images/RollerRiot_Frenzy.png';
+// Import images
+import heroImage from '../../assets/images/RollerRiot_Pannel_v1_Lrg.jpeg';
 
 const RollerRiotPage: React.FC = () => {
   return (
@@ -17,10 +16,7 @@ const RollerRiotPage: React.FC = () => {
             <span className="role">Lead Audio Programmer and Composer</span>
           </div>
           <div className="featured-image">
-            {/* Replace with actual image when available */}
-            <div className="placeholder-image">
-              <span>Roller Riot Hero Image</span>
-            </div>
+            <img src={heroImage} alt="Roller Riot - A side-to-side brawling mobile game" />
             <p className="caption">Roller Riot - A side-to-side brawling mobile game</p>
           </div>
         </header>
@@ -131,3 +127,5 @@ const RollerRiotPage: React.FC = () => {
 };
 
 export default RollerRiotPage;
+
+

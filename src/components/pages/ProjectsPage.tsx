@@ -10,6 +10,8 @@ import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.pn
 import heistStripImage from '../../assets/images/Heist_Strip_Generated_v1_Med.jpeg';
 import hexarThumbnailImage from '../../assets/images/Hexar_ProjectCardThumbnail_Wide_v2_Med.jpeg';
 import electricityDashboardImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';
+import rollerRiotImage from '../../assets/images/RollerRiot_Pannel_v1_Lrg.jpeg';
+import saveTheFlameImage from '../../assets/images/SaveTheFlame_Panel_v1_Lrg.jpeg';
 
 const ProjectsPage: React.FC = () => {
   const allProjects: ProjectCardProps[] = [
@@ -50,27 +52,21 @@ const ProjectsPage: React.FC = () => {
       link: '/projects/electricity-dashboard'
     },
     {
-      title: 'Weather Station',
-      description: 'A DIY weather station that collects and displays local weather data.',
-      imagePlaceholder: 'Weather Station',
-      link: '/projects/coming-soon'
+      title: 'Roller Riot',
+      description: 'A side-to-side brawling mobile game with dynamic audio and immersive cyberpunk atmosphere.',
+      imageUrl: rollerRiotImage,
+      link: '/projects/roller-riot'
+    },
+    {
+      title: 'Save The Flame',
+      description: 'An endless flying mobile game where players pursue the stolen fire crystal with dynamic audio.',
+      imageUrl: saveTheFlameImage,
+      link: '/projects/save-the-flame'
     },
     {
       title: 'Fitness Tracker App',
       description: 'A mobile application for tracking workouts and fitness progress.',
       imagePlaceholder: 'Fitness Tracker App',
-      link: '/projects/coming-soon'
-    },
-    {
-      title: 'Recipe Management System',
-      description: 'A digital recipe book with meal planning and grocery list features.',
-      imagePlaceholder: 'Recipe Management System',
-      link: '/projects/coming-soon'
-    },
-    {
-      title: 'Home Media Server',
-      description: 'A self-hosted media server for streaming personal content to any device.',
-      imagePlaceholder: 'Home Media Server',
       link: '/projects/coming-soon'
     }
   ];

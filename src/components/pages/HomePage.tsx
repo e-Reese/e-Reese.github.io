@@ -10,6 +10,8 @@ import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.pn
 import heistStripImage from '../../assets/images/Heist_Strip_Generated_v1_Med.jpeg';
 import hexarThumbnailImage from '../../assets/images/Hexar_ProjectCardThumbnail_Wide_v2_Med.jpeg';
 import electricityDashboardImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';
+import rollerRiotImage from '../../assets/images/RollerRiot_Pannel_v1_Lrg.jpeg';
+import saveTheFlameImage from '../../assets/images/SaveTheFlame_Panel_v1_Lrg.jpeg';
 
 const HomePage: React.FC = () => {
   const featuredProjects: ProjectCardProps[] = [
@@ -48,7 +50,7 @@ const HomePage: React.FC = () => {
       description: 'An interactive web application for monitoring and analyzing electricity usage patterns and costs.',
       imageUrl: electricityDashboardImage,
       link: '/projects/electricity-dashboard'
-    },
+    }
   ];
 
   return (

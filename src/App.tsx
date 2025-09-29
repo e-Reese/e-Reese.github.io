@@ -12,6 +12,8 @@ import NoirProjectPage from './components/pages/NoirProjectPage';
 import HexarPage from './components/pages/HexarPage';
 import BikeSharePage from './components/pages/BikeSharePage';
 import ElectricityDashboardPage from './components/pages/ElectricityDashboardPage';
+import RollerRiotPage from './components/pages/RollerRiotPage';
+import SaveTheFlamePage from './components/pages/SaveTheFlamePage';
 import ComingSoonPage from './components/pages/ComingSoonPage';
 import NotFoundPage from './components/pages/NotFoundPage';
 
@@ -32,6 +34,8 @@ const App: React.FC = () => {
         <Route path="/projects/hexar" element={<HexarPage />} />
         <Route path="/projects/bike-share" element={<BikeSharePage />} />
         <Route path="/projects/electricity-dashboard" element={<ElectricityDashboardPage />} />
+        <Route path="/projects/roller-riot" element={<RollerRiotPage />} />
+        <Route path="/projects/save-the-flame" element={<SaveTheFlamePage />} />
         <Route path="/projects/coming-soon" element={<ComingSoonPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
