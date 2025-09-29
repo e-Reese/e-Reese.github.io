@@ -154,7 +154,7 @@ main.article-page {
 
 .page-header h1 {
   font-size: 2.8rem;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .page-header p {

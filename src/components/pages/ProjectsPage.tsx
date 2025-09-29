@@ -62,12 +62,6 @@ const ProjectsPage: React.FC = () => {
       description: 'An endless flying mobile game where players pursue the stolen fire crystal with dynamic audio.',
       imageUrl: saveTheFlameImage,
       link: '/projects/save-the-flame'
-    },
-    {
-      title: 'Fitness Tracker App',
-      description: 'A mobile application for tracking workouts and fitness progress.',
-      imagePlaceholder: 'Fitness Tracker App',
-      link: '/projects/coming-soon'
     }
   ];
 
