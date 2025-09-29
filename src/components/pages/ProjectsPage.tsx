@@ -12,6 +12,7 @@ import hexarThumbnailImage from '../../assets/images/Hexar_ProjectCardThumbnail_
 import electricityDashboardImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';
 import rollerRiotImage from '../../assets/images/RollerRiot_Pannel_v1_Lrg.jpeg';
 import saveTheFlameImage from '../../assets/images/SaveTheFlame_Panel_v1_Lrg.jpeg';
+import divvyBikeShareImage from '../../assets/images/DivvyBarChartsOverview_Panel_Lrg.jpeg';
 
 const ProjectsPage: React.FC = () => {
   const allProjects: ProjectCardProps[] = [
@@ -42,7 +43,7 @@ const ProjectsPage: React.FC = () => {
     {
       title: 'Divvy Bike Share Marketing Strategy',
       description: 'A comprehensive marketing strategy for Divvy, Chicago\'s bike sharing service to increase user engagement and market penetration.',
-      imagePlaceholder: 'Divvy Bike Share',
+      imageUrl: divvyBikeShareImage,
       link: '/projects/bike-share'
     },
     {

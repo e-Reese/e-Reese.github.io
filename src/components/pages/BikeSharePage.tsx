@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import '../../styles/ProjectDetail.css';
+import divvyBikeShareImage from '../../assets/images/DivvyBarChartsOverview_Panel_Lrg.jpeg';
 
 const BikeSharePage: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const BikeSharePage: React.FC = () => {
             <span className="date">March 2024</span>
           </div>
           <div className="featured-image">
-            <div className="placeholder-image">Divvy Bike Share</div>
+            <img src={divvyBikeShareImage} alt="Divvy Bike Share Data Analysis" />
             <p className="caption">Comprehensive marketing strategy for Divvy Bike Share service</p>
           </div>
         </header>
