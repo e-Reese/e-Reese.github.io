@@ -37,4 +37,4 @@ The site is deployed using GitHub Pages. To deploy:
 
 ## Contact
 
-Feel free to reach out to me through the contact form on my website or via GitHub.
+Feel free to reach out to me through the contact form on my website or via GitHub.;

@@ -97,6 +97,23 @@ section .featured-image {
   margin-right: auto;
 }
 
+.article-image {
+  max-width: 100%;
+  margin: 30px auto;
+  display: block;
+  text-align: center;
+  object-fit: contain;
+}
+
+.article-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
 section figure {
   width: 75%;
   margin-left: auto;

@@ -1,14 +1,18 @@
 import React from 'react';
 import Layout from '../layout/Layout';
 import '../../styles/ProjectDetail.css';
-import divvyBikeShareImage from '../../assets/images/DivvyBarChartsOverview_Panel_Lrg.jpeg';
+import divvyBikeShareImage from '../../assets/images/DivvyThumbnail_AnimatedBike_v1.jpeg';
+import divvyWhenPeopleRideImage from '../../assets/images/Divvy_WhenPeopleRide_v1.jpg';
+import divvyHowLongPeopleRideImage from '../../assets/images/Divvy_HowLongPeopleRide_v1.jpg';
+import divvyWhatPeopleRideImage from '../../assets/images/Divvy_WhatPeopleRide_v1.jpg';
+import divvyWherePeopleRideImage from '../../assets/images/Divvy_WherePeopleRide_v1.jpg';
 
 const BikeSharePage: React.FC = () => {
   return (
     <Layout>
       <article>
         <header className="article-header">
-          <h1>Bike Share Marketing Strategy: Expanding Divvy Membershipy</h1>
+          <h1>Turning Casual Cyclists into Loyal Members: Divvy’s Marketing Strategy</h1>
           <div className="meta">
             <span className="author">By Ethan Reese</span>
             <span className="date">March 2024</span>
@@ -19,181 +23,81 @@ const BikeSharePage: React.FC = () => {
           </div>
         </header>
 
-        <section className="intro">
-          <h2>Introduction</h2>
+        <section className="executive-summary">
+          <h2>Executive Summary</h2>
           <p>
-            Divvy, Chicago’s leading bike-share service, has become a vital part of the city’s mobility and leisure landscape. While thousands of riders take advantage of the system every year, the challenge lies in converting casual riders—those who use the service occasionally—into annual members. 
-            By analyzing ride data from 2023-2024, we can uncover patterns in rider behavior and build targeted marketing strategies to encourage long-term engagement.
-          </p>
-        </section>
-
-        <section id="executive-summary">
-          <h2>Objective</h2>
-          <p>
-          The primary goal of this strategy is to identify ways to transform casual Divvy cyclists into committed annual members. Using ride history data, we can examine when, how, what, and where people ride, then apply those insights to design effective outreach campaigns.
+          Bike-sharing has become a cornerstone of sustainable transportation in major cities, and Chicago’s Divvy program is no exception. 
+          Yet, the challenge remains: how can Divvy convert casual riders into committed annual members? By analyzing ride data from 2023–2024, we uncover clear patterns that suggest where and how marketing efforts should focus.
           </p>
         </section>
 
         <section id="market-analysis">
-          <h2>Market Analysis</h2>
+          <h2>Understanding Rider Behavior</h2>
           
-          <h3>Current Market Position</h3>
+          <h3>When Do People Ride?</h3>
           <p>
-            Divvy is currently the dominant bike share service in Chicago with over 600 stations and 6,000 bikes across the city. The service has seen steady growth in ridership, particularly among commuters and tourists, but faces challenges in certain demographics and neighborhoods.
+          The data shows a distinct divide between casual riders and annual members. 
+          Casual riders overwhelmingly prefer weekends, while members use the service more frequently during the week. 
+          Both groups ride more in the summer months, but casual riders' spikes in activity suggest their rides are largely leisure-driven.
           </p>
+          <div className="article-image">
+            <img src={divvyWhenPeopleRideImage} alt="Chart showing when people ride Divvy bikes" />
+            <p className="caption">Ride frequency comparison between casual riders and annual members</p>
+          </div>
           
-          <h3>Target Audience</h3>
+          <h3>How Long Are the Rides?</h3>
           <p>
-            Primary segments include:
+          Casual riders don't just ride differently—they ride longer. 
+          Their trips extend significantly, especially on weekends and throughout spring and summer (April through August). 
+          This supports the idea that their rides are more recreational than utilitarian.
           </p>
-          <ul>
-            <li><strong>Urban Commuters:</strong> Working professionals using Divvy for last-mile transportation</li>
-            <li><strong>Recreational Riders:</strong> Weekend users and tourists exploring the city</li>
-            <li><strong>Students:</strong> College and university students seeking affordable transportation</li>
-            <li><strong>Underserved Communities:</strong> Residents in areas with limited public transportation options</li>
-          </ul>
+          <div className="article-image">
+            <img src={divvyHowLongPeopleRideImage} alt="Chart showing ride duration comparison between casual riders and members" />
+            <p className="caption">Ride duration comparison between casual riders and annual members</p>
+          </div>
           
-          <h3>Competitive Landscape</h3>
+          <h3>What Types of Bikes Do They Use?</h3>
           <p>
-            While Divvy dominates the bike share market in Chicago, it competes with:
+          While Divvy offers multiple bike types, casual riders show only a slight preference for classic bikes. 
+          Members ride both classic and electric bikes in similar proportions. 
+          For marketing strategy, this indicates that campaigns should remain bike-neutral, appealing broadly across both options.
           </p>
-          <ul>
-            <li>Ride-sharing services (Uber, Lyft)</li>
-            <li>Electric scooter rentals</li>
-            <li>Public transportation</li>
-            <li>Personal bike ownership</li>
-          </ul>
-        </section>
+          <div className="article-image">
+            <img src={divvyWhatPeopleRideImage} alt="Chart showing bike type preferences between casual riders and members" />
+            <p className="caption">Bike type preferences comparison between casual riders and annual members</p>
+          </div>
 
-        <section id="challenges-opportunities">
-          <h2>Challenges and Opportunities</h2>
-          
-          <h3>Challenges</h3>
-          <ul>
-            <li>Seasonal ridership fluctuations with significant drops during winter months</li>
-            <li>Limited penetration in certain neighborhoods, particularly in underserved areas</li>
-            <li>User retention issues, with many one-time users not converting to regular riders</li>
-            <li>Technological limitations in the current mobile app and payment systems</li>
-            <li>Bike availability and rebalancing issues during peak hours</li>
-          </ul>
-          
-          <h3>Opportunities</h3>
-          <ul>
-            <li>Growing interest in sustainable transportation options</li>
-            <li>Expansion of bike lanes and cycling infrastructure throughout Chicago</li>
-            <li>Potential for integration with other transit systems for seamless multimodal journeys</li>
-            <li>Increasing health and wellness consciousness among urban residents</li>
-            <li>Technological advancements enabling improved user experience and operational efficiency</li>
-          </ul>
-        </section>
-
-        <section id="marketing-strategy">
-          <h2>Marketing Strategy</h2>
-          
-          <h3>Technological Enhancements</h3>
-          <ul>
-            <li>
-              <strong>App Redesign:</strong> Overhaul the Divvy mobile app with improved UI/UX, real-time bike availability, and journey planning features
-            </li>
-            <li>
-              <strong>Payment System Integration:</strong> Expand payment options to include mobile wallets, contactless payments, and integration with Chicago Transit Authority cards
-            </li>
-            <li>
-              <strong>Predictive Analytics:</strong> Implement AI-driven bike rebalancing to ensure availability in high-demand areas
-            </li>
-          </ul>
-          
-          <h3>Strategic Partnerships</h3>
-          <ul>
-            <li>
-              <strong>Corporate Partnerships:</strong> Develop B2B programs with major employers for employee commuter benefits
-            </li>
-            <li>
-              <strong>University Collaborations:</strong> Create special student membership plans with local colleges and universities
-            </li>
-            <li>
-              <strong>Tourism Board Collaboration:</strong> Partner with Choose Chicago to create tourist-friendly bike routes and packages
-            </li>
-            <li>
-              <strong>Community Organizations:</strong> Work with neighborhood associations to increase awareness and accessibility in underserved areas
-            </li>
-          </ul>
-          
-          <h3>Targeted Marketing Campaigns</h3>
-          <ul>
-            <li>
-              <strong>"Winter Warrior" Campaign:</strong> Incentivize winter riding through gamification, rewards, and special winter-ready bikes
-            </li>
-            <li>
-              <strong>"Divvy in Your Neighborhood" Initiative:</strong> Hyperlocal marketing targeting specific neighborhoods with customized messaging and community events
-            </li>
-            <li>
-              <strong>"Commuter Challenge":</strong> Corporate competition encouraging employees to choose Divvy for commuting
-            </li>
-            <li>
-              <strong>"First Mile/Last Mile" Campaign:</strong> Highlighting Divvy as the perfect complement to public transit for completing journeys
-            </li>
-          </ul>
-        </section>
-
-        <section id="implementation-plan">
-          <h2>Implementation Plan</h2>
-          
-          <h3>Phase 1: Foundation (Q1)</h3>
-          <ul>
-            <li>Conduct comprehensive user research and segmentation analysis</li>
-            <li>Begin app redesign process with user testing</li>
-            <li>Establish initial corporate and university partnerships</li>
-          </ul>
-          
-          <h3>Phase 2: Launch (Q2)</h3>
-          <ul>
-            <li>Roll out new app features and payment integrations</li>
-            <li>Launch "Divvy in Your Neighborhood" campaign in 5 target communities</li>
-            <li>Implement corporate membership program with 10 pilot companies</li>
-          </ul>
-          
-          <h3>Phase 3: Expansion (Q3-Q4)</h3>
-          <ul>
-            <li>Expand neighborhood initiatives to additional communities</li>
-            <li>Launch "Winter Warrior" campaign ahead of seasonal decline</li>
-            <li>Scale corporate and university partnerships</li>
-            <li>Implement predictive rebalancing system</li>
-          </ul>
-        </section>
-
-        <section id="metrics-evaluation">
-          <h2>Metrics and Evaluation</h2>
+          <h3>Where Do They Ride?</h3>
           <p>
-            Success will be measured through:
+          Perhaps the most telling insight is where casual riders choose to go. 
+          Nearly 15% of rides start or end at just five stations—each located near Chicago's lakeshore and popular tourist attractions. 
+          These hotspots are magnets for visitors and leisure riders, making them prime areas for engagement campaigns.
           </p>
-          <ul>
-            <li><strong>Ridership Growth:</strong> Overall increase in rides, with specific targets for winter months and underserved areas</li>
-            <li><strong>User Retention:</strong> Increase in repeat users and membership conversions</li>
-            <li><strong>App Engagement:</strong> App downloads, active users, and feature utilization</li>
-            <li><strong>Partnership Performance:</strong> Membership sign-ups through partner organizations</li>
-            <li><strong>Revenue Growth:</strong> Increase in overall revenue and revenue per bike</li>
-          </ul>
+          <div className="article-image">
+            <img src={divvyWherePeopleRideImage} alt="Map showing popular Divvy bike stations for casual riders and members" />
+            <p className="caption">Popular station locations comparison between casual riders and annual members</p>
+          </div>
         </section>
 
-        <section id="budget-allocation">
-          <h2>Budget Allocation</h2>
-          <ul>
-            <li><strong>Technological Development:</strong> 35%</li>
-            <li><strong>Marketing Campaigns:</strong> 30%</li>
-            <li><strong>Partnership Development:</strong> 20%</li>
-            <li><strong>Research and Analytics:</strong> 10%</li>
-            <li><strong>Contingency:</strong> 5%</li>
-          </ul>
+        <section id="marketing-recommendations">
+          <h2>Marketing Recommendations</h2>
+          
+          <h3>From the data, three key strategies emerge:</h3>
+          <ol>
+            <li><strong>Time Campaigns to Match Riding Behavior</strong></li>
+            <p>Focus membership promotions on weekends and during the summer, when casual ridership peaks.</p>
+            <li><strong>Engage Leisure Riders and Tourists</strong></li>
+            <p>Tailor messaging that highlights the value of an annual pass even for those who ride recreationally—position it as a way to explore the city with freedom.</p>
+            <li><strong>Target High-Traffic Stations</strong></li>
+            <p>Concentrate marketing at the five most frequented stations along the coast and near tourist attractions. Visibility here ensures campaigns reach the largest pool of casual riders.</p>
+          </ol>
         </section>
 
         <section id="conclusion">
-          <h2>Conclusion</h2>
+          <h2>Final Thoughts</h2>
           <p>
-            This comprehensive marketing strategy addresses Divvy's core challenges while capitalizing on emerging opportunities in the urban mobility landscape. By enhancing technology, building strategic partnerships, and implementing targeted campaigns, Divvy can strengthen its position as Chicago's premier bike share service while expanding its reach to new users and communities.
-          </p>
-          <p>
-            The phased implementation approach allows for continuous evaluation and adjustment, ensuring that resources are allocated effectively and that the strategy remains responsive to market changes and user feedback.
+          Divvy has an opportunity to turn casual weekend cyclists into year-round members by meeting them where they ride, when they ride, and how they ride. 
+          By combining targeted station-level engagement with seasonally timed campaigns, the program can grow its membership base while deepening its role in Chicago’s cycling culture.
           </p>
         </section>
       </article>
