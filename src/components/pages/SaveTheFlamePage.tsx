@@ -4,6 +4,7 @@ import '../../styles/ProjectDetail.css';
 
 // Import images
 import heroImage from '../../assets/images/SaveTheFlame_Panel_v1_Lrg.jpeg';
+import actionShotImage from '../../assets/images/SaveTheFlame_ActionShot_Small.jpeg';
 
 const SaveTheFlamePage: React.FC = () => {
   return (
@@ -27,6 +28,23 @@ const SaveTheFlamePage: React.FC = () => {
             pursuit of the stolen fire crystal. As the Lead Audio Programmer and Composer, I was responsible for 
             creating an immersive audio experience that enhances the gameplay and keeps players engaged.
           </p>
+          
+          <div className="article-image">
+            <img src={actionShotImage} alt="Save The Flame gameplay action shot" />
+            <p className="caption">In-game action shot of Save The Flame</p>
+          </div>
+        </section>
+
+        <section id="video-section">
+          <h2>Gameplay Demo</h2>
+          <div className="video-container">
+            <iframe 
+              src="https://youtu.be/CF0el9B-nw0" 
+              title="Save The Flame Gameplay Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen>
+            </iframe>
+          </div>
         </section>
 
         <section id="technical-overview">

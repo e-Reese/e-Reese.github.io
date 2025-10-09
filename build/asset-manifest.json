@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ccf6661f.css",
-    "main.js": "/static/js/main.dd20a30d.js",
+    "main.js": "/static/js/main.521038b2.js",
     "static/js/453.78d5fc45.chunk.js": "/static/js/453.78d5fc45.chunk.js",
     "static/media/AlpacaTraderThumbnail_Wide.png": "/static/media/AlpacaTraderThumbnail_Wide.0bf22bc9eb22ac7acc1b.png",
     "static/media/DivvyThumbnail_AnimatedBike_v1.jpeg": "/static/media/DivvyThumbnail_AnimatedBike_v1.37ddc22d399e57e4a0c5.jpeg",
@@ -30,11 +30,11 @@
     "static/media/ElectricityDashboard_HeroPanelImage_Med.jpeg": "/static/media/ElectricityDashboard_HeroPanelImage_Med.7234a6b9f85f4e4469e3.jpeg",
     "index.html": "/index.html",
     "main.ccf6661f.css.map": "/static/css/main.ccf6661f.css.map",
-    "main.dd20a30d.js.map": "/static/js/main.dd20a30d.js.map",
+    "main.521038b2.js.map": "/static/js/main.521038b2.js.map",
     "453.78d5fc45.chunk.js.map": "/static/js/453.78d5fc45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ccf6661f.css",
-    "static/js/main.dd20a30d.js"
+    "static/js/main.521038b2.js"
   ]
 }

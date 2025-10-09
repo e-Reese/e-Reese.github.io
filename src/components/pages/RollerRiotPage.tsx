@@ -4,6 +4,7 @@ import '../../styles/ProjectDetail.css';
 
 // Import images
 import heroImage from '../../assets/images/RollerRiot_Pannel_v1_Lrg.jpeg';
+import frenzyImage from '../../assets/images/RollerRiot_Frenzy_PNG Large.jpeg';
 
 const RollerRiotPage: React.FC = () => {
   return (
@@ -32,20 +33,19 @@ const RollerRiotPage: React.FC = () => {
 
         {/* Secondary image */}
         <div className="article-image">
-          {/* Replace with actual image when available */}
-          <div className="placeholder-image">
-            <span>Roller Riot Frenzy Image</span>
-          </div>
+          <img src={frenzyImage} alt="Roller Riot Frenzy Mode" />
           <p className="caption">Frenzy mode in Roller Riot</p>
         </div>
 
         <section id="video-section">
           <h2>Gameplay Demo</h2>
           <div className="video-container">
-            {/* Replace with actual video embed when available */}
-            <div className="placeholder-video">
-              <span>Roller Riot Gameplay Video</span>
-            </div>
+            <iframe 
+              src="https://youtu.be/GxEqPNBImyw"
+              title="Roller Riot Gameplay Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen>
+            </iframe>
           </div>
         </section>
 
@@ -120,7 +120,13 @@ const RollerRiotPage: React.FC = () => {
             Roller Riot is available for download on the App Store, allowing players to experience the fast-paced
             action and dynamic audio firsthand.
           </p>
+          <div className="app-store-link">
+            <a href="https://apps.apple.com/us/app/roller-riot/id1234567890" target="_blank" rel="noopener noreferrer">
+              Download on the App Store
+            </a>
+          </div>
         </section>
+
       </article>
     </Layout>
   );
