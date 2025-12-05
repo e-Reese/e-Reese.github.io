@@ -6,7 +6,7 @@ import '../../styles/Home.css';
 
 // Import images
 import raspberryPiRouterImage from '../../assets/images/TravelRouter_Generated_v1_Med.jpeg';
-import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.png';
+import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.jpeg';
 import heistStripImage from '../../assets/images/Heist_Strip_Generated_v1_Med.jpeg';
 import hexarThumbnailImage from '../../assets/images/Hexar_ProjectCardThumbnail_Wide_v2_Med.jpeg';
 import electricityDashboardImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';

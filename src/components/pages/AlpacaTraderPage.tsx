@@ -3,7 +3,7 @@ import Layout from '../layout/Layout';
 import '../../styles/ProjectDetail.css';
 
 // Import images
-import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.png';
+import alpacaTraderImage from '../../assets/images/AlpacaTraderThumbnail_Wide.jpeg';
 
 const AlpacaTraderPage: React.FC = () => {
   return (
