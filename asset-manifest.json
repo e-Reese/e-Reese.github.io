@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.27b90f30.css",
-    "main.js": "/static/js/main.dde2720e.js",
+    "main.js": "/static/js/main.ea5256e1.js",
     "static/js/453.78d5fc45.chunk.js": "/static/js/453.78d5fc45.chunk.js",
-    "static/media/AlpacaTraderThumbnail_Wide.png": "/static/media/AlpacaTraderThumbnail_Wide.0bf22bc9eb22ac7acc1b.png",
     "static/media/HexarPage_HeaderVideo_v4.mp4": "/static/media/HexarPage_HeaderVideo_v4.a2930ff5ccb3581efe49.mp4",
-    "static/media/DivvyThumbnail_AnimatedBike_v1.jpeg": "/static/media/DivvyThumbnail_AnimatedBike_v1.37ddc22d399e57e4a0c5.jpeg",
+    "static/media/DivvyThumbnail_AnimatedBike_v1.jpeg": "/static/media/DivvyThumbnail_AnimatedBike_v1.1c92b439fdd66ea5f7eb.jpeg",
     "static/media/Divvy_HowLongPeopleRide_v1.jpg": "/static/media/Divvy_HowLongPeopleRide_v1.44ee5e13e3adb841d82d.jpg",
     "static/media/Divvy_WhenPeopleRide_v1.jpg": "/static/media/Divvy_WhenPeopleRide_v1.051b0b98e23515c5aef9.jpg",
     "static/media/Divvy_WherePeopleRide_v1.jpg": "/static/media/Divvy_WherePeopleRide_v1.1f530e5f3c20f695fe3b.jpg",
@@ -23,6 +22,7 @@
     "static/media/Hexar_Collections_Azure_Architecture_V3.jpeg": "/static/media/Hexar_Collections_Azure_Architecture_V3.c3b2425e1549baeaba56.jpeg",
     "static/media/Heist_NineGrid-Annotated_Med.jpeg": "/static/media/Heist_NineGrid-Annotated_Med.f93eeff4c9333cb5e893.jpeg",
     "static/media/Heist_Strip_Generated_v1_Med.jpeg": "/static/media/Heist_Strip_Generated_v1_Med.c428bd927de558d5e930.jpeg",
+    "static/media/AlpacaTraderThumbnail_Wide.jpeg": "/static/media/AlpacaTraderThumbnail_Wide.e94a548c75db4f5576a5.jpeg",
     "static/media/Heist_Controllers_Med.jpeg": "/static/media/Heist_Controllers_Med.6dee29a679a3a2e1fe96.jpeg",
     "static/media/TravelRouter_Generated_v1_Med.jpeg": "/static/media/TravelRouter_Generated_v1_Med.5ab923116e0956a07e80.jpeg",
     "static/media/Heist_LiveCameraScreen-Annotated_Med.jpeg": "/static/media/Heist_LiveCameraScreen-Annotated_Med.2aa81acfa505141721a9.jpeg",
@@ -38,11 +38,11 @@
     "static/media/ElectricityDashboard_HeroPanelImage_Med.jpeg": "/static/media/ElectricityDashboard_HeroPanelImage_Med.7234a6b9f85f4e4469e3.jpeg",
     "index.html": "/index.html",
     "main.27b90f30.css.map": "/static/css/main.27b90f30.css.map",
-    "main.dde2720e.js.map": "/static/js/main.dde2720e.js.map",
+    "main.ea5256e1.js.map": "/static/js/main.ea5256e1.js.map",
     "453.78d5fc45.chunk.js.map": "/static/js/453.78d5fc45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.27b90f30.css",
-    "static/js/main.dde2720e.js"
+    "static/js/main.ea5256e1.js"
   ]
 }
