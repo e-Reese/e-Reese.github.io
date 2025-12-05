@@ -14,23 +14,23 @@ const AboutPage: React.FC = () => {
         <div className="about-text">
           <p>Hello! I'm Ethan Reese, a software engineer and technology enthusiast with a passion for building innovative solutions to real-world problems.</p>
           
-          <p>I specialize in developing applications and systems that make people's lives easier. My technical interests include embedded systems, web development, IoT devices, and automation.</p>
+          <p>I specialize in developing applications and systems that make people's lives easier or more captivating! My technical interests include embedded systems, game development, web development, IoT devices, audio programming, and automation.</p>
           
-          <p>When I'm not coding, you can find me experimenting with new hardware projects, exploring the outdoors, or reading about the latest technology trends.</p>
+          <p>When I'm not coding, you can find me experimenting with new hardware projects, making music, or reading some silly fanfic.</p>
           
           <h2>Skills</h2>
           <ul>
-            <li>Programming Languages: Python, JavaScript, C++, HTML/CSS</li>
-            <li>Frameworks & Libraries: React, Node.js, Flask</li>
-            <li>Tools & Technologies: Git, Docker, Linux, Raspberry Pi</li>
-            <li>Other: UI/UX Design, Technical Writing, Project Management</li>
+            <li>Programming Languages: Python, C#, C/C++, JavaScript/TypeScript, R, Julia</li>
+            <li>Game Development: Unreal Engine, Unity</li>
+            <li>Audio & Visual Programming: JUCE, TouchDesigner</li>
+            <li>Embedded Systems: Raspberry Pi, Arduino, custom hardware integration</li>
+            <li>Web Development: React, Node.js, Flask</li>
+            <li>Tools & Technologies: Git, Docker, Linux</li>
           </ul>
           
-          <h2>Experience</h2>
-          <p>This section will be updated soon with my professional experience and background.</p>
           
           <h2>Education</h2>
-          <p>This section will be updated soon with my educational background.</p>
+          <p>Jazz school. But actually graduated.</p>
         </div>
       </section>
     </Layout>

@@ -144,7 +144,7 @@ main.article-page {
 
 /* Page Header */
 .page-header {
-  padding: 60px 0;
+  padding: 10px 0;
   text-align: center;
   margin-bottom: 60px;
   max-width: var(--container-width);

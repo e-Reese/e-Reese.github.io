@@ -4,7 +4,6 @@ import ScrollToTop from './components/utils/ScrollToTop';
 
 // Import pages
 import HomePage from './components/pages/HomePage';
-import ProjectsPage from './components/pages/ProjectsPage';
 import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import TravelRouterPage from './components/pages/TravelRouterPage';
@@ -27,7 +26,6 @@ const App: React.FC = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects/travel-router" element={<TravelRouterPage />} />

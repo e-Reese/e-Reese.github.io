@@ -4,6 +4,10 @@ import '../../styles/ProjectDetail.css';
 
 // Import images
 import heroImage from '../../assets/images/ElectricityDashboard_HeroPanelImage_Med.jpeg';
+import generationView from '../../assets/images/ElecDashboard_Generation.jpeg';
+import priceSalesFullView from '../../assets/images/ElecDashboard_Price_Sales_Full.jpeg';
+import priceSalesFilteredView from '../../assets/images/ElecDashboard_Price_Sales_Filtered.jpeg';
+import revenueView from '../../assets/images/ElecDashboard_Revenue.jpeg';
 
 const ElectricityDashboardPage: React.FC = () => {
   return (
@@ -24,7 +28,7 @@ const ElectricityDashboardPage: React.FC = () => {
         <section className="intro">
           <p>
             The Electricity Dashboard is a comprehensive web application designed to monitor, analyze, and visualize 
-            electricity usage patterns. This tool provides real-time insights into consumption trends, cost analysis, 
+            electricity usage patterns. This tool provides dynamic insights into consumption trends, cost analysis, 
             and environmental impact metrics, helping users make informed decisions about their energy usage.
           </p>
         </section>
@@ -32,7 +36,7 @@ const ElectricityDashboardPage: React.FC = () => {
         <section id="features">
           <h2>Key Features</h2>
           <ul>
-            <li>Real-time electricity usage monitoring with intuitive visualizations</li>
+            <li>Interactive electricity usage monitoring with intuitive visualizations</li>
             <li>Historical data analysis with customizable date ranges</li>
             <li>Cost calculation and projection based on variable rate plans</li>
             <li>Environmental impact metrics (carbon footprint)</li>
@@ -56,36 +60,37 @@ const ElectricityDashboardPage: React.FC = () => {
           </ul>
         </section>
 
-        <section id="implementation">
-          <h2>Implementation Details</h2>
+        <section id="dashboard-views">
+          <h2>Interactive Dashboard Views</h2>
           <p>
-            The dashboard interfaces with smart meter APIs or IoT devices to collect electricity usage data. 
-            This data is processed, normalized, and stored in a time-series database optimized for quick retrieval 
-            of historical information.
+            The dashboard provides three distinct views: Generation tracks electricity production by source and 
+            region, Price and Sales analyzes market pricing and volume, and Revenue monitors financial performance. 
+            Each view includes a dynamic filtering panel that allows users to refine data by state, sector, and 
+            producer type. The images below show both full and filtered datasets, demonstrating the side panel 
+            controls for targeted analysis.
           </p>
-          <p>
-            The application employs several advanced features:
-          </p>
-          <ul>
-            <li>
-              <strong>Predictive Analytics:</strong> Machine learning algorithms analyze usage patterns to predict 
-              future consumption and potential cost savings opportunities.
-            </li>
-            <li>
-              <strong>Comparative Analysis:</strong> Users can benchmark their usage against similar households 
-              or previous time periods to identify efficiency improvements.
-            </li>
-            <li>
-              <strong>Rate Optimization:</strong> The system can suggest optimal electricity rate plans based on 
-              usage patterns and available provider options.
-            </li>
-            <li>
-              <strong>Integration Capabilities:</strong> APIs allow for integration with smart home systems, 
-              enabling automated responses to usage patterns or price signals.
-            </li>
-          </ul>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '20px', margin: '20px 0' }}>
+            <div>
+              <img src={generationView} alt="Electricity Generation Dashboard View" style={{ width: '100%', height: 'auto' }} />
+              <p className="caption">Generation view displaying electricity production metrics</p>
+            </div>
+            <div>
+              <img src={revenueView} alt="Revenue Dashboard View" style={{ width: '100%', height: 'auto' }} />
+              <p className="caption">Revenue view analyzing financial metrics and sales performance</p>
+            </div>
+            <div>
+              <img src={priceSalesFullView} alt="Price and Sales Dashboard - Full Data" style={{ width: '100%', height: 'auto' }} />
+              <p className="caption">Price and sales view showing complete dataset</p>
+            </div>
+            <div>
+              <img src={priceSalesFilteredView} alt="Price and Sales Dashboard - Filtered View" style={{ width: '100%', height: 'auto' }} />
+              <p className="caption">Filtered view demonstrating dynamic data refinement</p>
+            </div>
+          </div>
         </section>
 
+      
         <section id="user-experience">
           <h2>User Experience Design</h2>
           <p>
@@ -96,7 +101,6 @@ const ElectricityDashboardPage: React.FC = () => {
             <li>Progressive disclosure of advanced features to avoid overwhelming new users</li>
             <li>Customizable dashboard layouts that adapt to user preferences</li>
             <li>Accessibility compliance ensuring the tool is usable by everyone</li>
-            <li>Dark mode support to reduce eye strain during nighttime usage</li>
           </ul>
         </section>
 
@@ -111,44 +115,13 @@ const ElectricityDashboardPage: React.FC = () => {
               required careful database optimization and caching strategies.
             </li>
             <li>
-              <strong>Real-time Updates:</strong> Implementing efficient WebSocket connections that maintain 
-              performance even with many concurrent users.
+              <strong>Interactive Performance:</strong> Ensuring responsive user interactions and smooth 
+              filtering capabilities when working with large datasets across multiple visualizations.
             </li>
             <li>
               <strong>Cross-device Consistency:</strong> Ensuring a consistent experience across desktop, tablet, 
               and mobile devices with varying screen sizes and capabilities.
             </li>
-            <li>
-              <strong>API Integration:</strong> Creating flexible adapters for various electricity provider APIs 
-              and IoT device protocols, each with different data formats and authentication methods.
-            </li>
-          </ul>
-        </section>
-
-        <section id="impact">
-          <h2>Impact and Results</h2>
-          <p>
-            The Electricity Dashboard has demonstrated significant benefits for its users:
-          </p>
-          <ul>
-            <li>Average of 15% reduction in electricity costs through improved usage awareness</li>
-            <li>Identification of energy-inefficient appliances and behaviors</li>
-            <li>Enhanced ability to budget for electricity expenses with predictive cost modeling</li>
-            <li>Reduced environmental impact through more conscious electricity consumption</li>
-          </ul>
-        </section>
-
-        <section id="future">
-          <h2>Future Development</h2>
-          <p>
-            Ongoing and planned enhancements to the dashboard include:
-          </p>
-          <ul>
-            <li>Integration with additional smart home platforms and IoT devices</li>
-            <li>Enhanced machine learning capabilities for more accurate predictions</li>
-            <li>Expanded comparative analytics with anonymized community data</li>
-            <li>Development of mobile applications for iOS and Android</li>
-            <li>Implementation of voice interface for accessibility</li>
           </ul>
         </section>
       </article>

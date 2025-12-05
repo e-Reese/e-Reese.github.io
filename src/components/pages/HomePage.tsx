@@ -48,6 +48,18 @@ const HomePage: React.FC = () => {
       link: '/projects/bike-share'
     },
     {
+      title: 'Roller Riot',
+      description: 'A side-to-side brawling mobile game with dynamic audio and immersive cyberpunk atmosphere.',
+      imageUrl: rollerRiotImage,
+      link: '/projects/roller-riot'
+    },
+    {
+      title: 'Save The Flame',
+      description: 'An endless flying mobile game where players pursue the stolen fire crystal with dynamic audio.',
+      imageUrl: saveTheFlameImage,
+      link: '/projects/save-the-flame'
+    },
+    {
       title: 'Electricity Dashboard',
       description: 'An interactive web application for monitoring and analyzing electricity usage patterns and costs.',
       imageUrl: electricityDashboardImage,
@@ -61,7 +73,8 @@ const HomePage: React.FC = () => {
         <div className="hero-content">
           <h1>Ethan Reese</h1>
           <p className="lead">Software Engineer & Technology Enthusiast</p>
-          <p>I build innovative solutions to real-world problems using modern technologies.</p>
+          <p>Focusing on building solutions that make people's lives easier, or at least more captivating!</p>
+          <p>Check out my <a href="https://github.com/e-reese">GitHub</a> for the latest updates.</p>
           <div className="hero-buttons">
             {/* Add buttons here if needed */}
           </div>
