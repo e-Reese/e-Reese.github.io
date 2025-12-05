@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c19e9e3.css",
-    "main.js": "/static/js/main.573b59eb.js",
+    "main.css": "/static/css/main.27b90f30.css",
+    "main.js": "/static/js/main.dde2720e.js",
     "static/js/453.78d5fc45.chunk.js": "/static/js/453.78d5fc45.chunk.js",
     "static/media/AlpacaTraderThumbnail_Wide.png": "/static/media/AlpacaTraderThumbnail_Wide.0bf22bc9eb22ac7acc1b.png",
     "static/media/HexarPage_HeaderVideo_v4.mp4": "/static/media/HexarPage_HeaderVideo_v4.a2930ff5ccb3581efe49.mp4",
@@ -14,7 +14,11 @@
     "static/media/Divvy_WhatPeopleRide_v1.jpg": "/static/media/Divvy_WhatPeopleRide_v1.a7ea6ce567586c5eb163.jpg",
     "static/media/RaspAp_TravelRouter_v2.jpeg": "/static/media/RaspAp_TravelRouter_v2.2f43234970e4bef2d84c.jpeg",
     "static/media/SaveTheFlame_ActionShot_Small.jpeg": "/static/media/SaveTheFlame_ActionShot_Small.afc35d93a4eb60521083.jpeg",
+    "static/media/ElecDashboard_Generation.jpeg": "/static/media/ElecDashboard_Generation.00f8f1691eaa288cd05a.jpeg",
+    "static/media/ElecDashboard_Price_Sales_Full.jpeg": "/static/media/ElecDashboard_Price_Sales_Full.8cb994a903f397d16a4f.jpeg",
     "static/media/RollerRiot_Pannel_v1_Lrg.jpeg": "/static/media/RollerRiot_Pannel_v1_Lrg.e5fc8f98364b1ef546eb.jpeg",
+    "static/media/ElecDashboard_Revenue.jpeg": "/static/media/ElecDashboard_Revenue.a250248f940d2195f45a.jpeg",
+    "static/media/ElecDashboard_Price_Sales_Filtered.jpeg": "/static/media/ElecDashboard_Price_Sales_Filtered.b4502507bbbb05edfbd7.jpeg",
     "static/media/SaveTheFlame_Panel_v1_Lrg.jpeg": "/static/media/SaveTheFlame_Panel_v1_Lrg.025c0e7eff94ff4776b4.jpeg",
     "static/media/Hexar_Collections_Azure_Architecture_V3.jpeg": "/static/media/Hexar_Collections_Azure_Architecture_V3.c3b2425e1549baeaba56.jpeg",
     "static/media/Heist_NineGrid-Annotated_Med.jpeg": "/static/media/Heist_NineGrid-Annotated_Med.f93eeff4c9333cb5e893.jpeg",
@@ -33,12 +37,12 @@
     "static/media/Hexar_ProjectCardThumbnail_Wide_v2_Med.jpeg": "/static/media/Hexar_ProjectCardThumbnail_Wide_v2_Med.5f0eb79ec0de1b01dca6.jpeg",
     "static/media/ElectricityDashboard_HeroPanelImage_Med.jpeg": "/static/media/ElectricityDashboard_HeroPanelImage_Med.7234a6b9f85f4e4469e3.jpeg",
     "index.html": "/index.html",
-    "main.2c19e9e3.css.map": "/static/css/main.2c19e9e3.css.map",
-    "main.573b59eb.js.map": "/static/js/main.573b59eb.js.map",
+    "main.27b90f30.css.map": "/static/css/main.27b90f30.css.map",
+    "main.dde2720e.js.map": "/static/js/main.dde2720e.js.map",
     "453.78d5fc45.chunk.js.map": "/static/js/453.78d5fc45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c19e9e3.css",
-    "static/js/main.573b59eb.js"
+    "static/css/main.27b90f30.css",
+    "static/js/main.dde2720e.js"
   ]
 }
